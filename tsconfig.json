@@ -14,7 +14,7 @@
     "typings/main"
   ],
   "filesGlob": [
-    "./ng2-rest.ts",
+    "./static-columns.ts",
     "./src/**/*.ts",
     "./test/**/*.ts",
     "!./node_modules/**/*.ts",
