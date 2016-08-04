@@ -1,6 +1,6 @@
 {
   "name": "static-columns",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Static columns with flexbox for Agnular2",
   "main": "static-columns.ts",
   "scripts": {
@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/darekf77/static-columns/issues"
   },
-  "homepage": "https://github.com/darekf77/static-columns#readme"
+  "homepage": "https://github.com/darekf77/static-columns#readme",
+  "devDependencies": {
+    "@angular/core": "^2.0.0-rc.4"
+  }
 }
