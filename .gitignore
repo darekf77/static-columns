@@ -19,3 +19,9 @@ npm-debug.log*
 /src/typings/tsd/
 /typings/
 /tsd_typings/
+
+
+/static-columns.js
+/static-columns.map.js
+/src/**/*.js
+/src/**/*.js.map
