@@ -1,6 +1,6 @@
 {
   "name": "static-columns",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Static columns with flexbox for Agnular2",
   "main": "static-columns.ts",
   "scripts": {
