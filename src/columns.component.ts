@@ -4,8 +4,7 @@ import { ColumnComponent } from './column';
 @Component({
     selector: 'columns-container',
     template: require('./columns.component.html'),
-    styles: [require('./columns.component.scss')],
-    directives: [ColumnComponent]
+    styles: [require('./columns.component.scss')]
 })
 export class ColumnsComponent implements OnInit {
     @ViewChildren(ColumnComponent) childrens: QueryList<ColumnComponent>;
