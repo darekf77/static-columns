@@ -3,8 +3,8 @@ import { ColumnComponent } from './column';
 
 @Component({
     selector: 'columns-container',
-    template: require('./columns.component.html'),
-    styles: [require('./columns.component.scss')]
+    templateUrl: './columns.component.html',
+    styleUrls: ['./columns.component.scss']
 })
 export class ColumnsComponent implements OnInit {
     @ViewChildren(ColumnComponent) childrens: QueryList<ColumnComponent>;
