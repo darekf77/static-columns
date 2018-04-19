@@ -36,7 +36,11 @@
     "node-sass": "^4.7.2"
   },
   "tnp": {
-    "type": "angular-lib"
+    "type": "angular-lib",
+    "resources": [
+      "README.md",
+      "screen.png"
+    ]
   },
   "dependencies": {
     "rxjs": "^5.5.10"
