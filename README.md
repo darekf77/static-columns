@@ -14,12 +14,12 @@ How to install:
 
 Import it:
 
-    import {ColumnsComponent, ColumnComponent, DirectiveGrow} form "static-columns/static-columns"
+    import { StaticColumnsModule } form "static-columns"
 
 Put inside directives array:
 
     ...
-    directives: [ColumnComponent, ColumnsComponent, DirectiveGrow]
+    imports: []StaticColumnsModule
     ...
 
 Example:
