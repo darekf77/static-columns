@@ -1,5 +1,4 @@
 import {Component, Directive, ElementRef, Renderer} from '@angular/core';
-import { ColumnComponent } from './column.component';
 
 
 @Directive({
