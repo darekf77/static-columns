@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { MyLibModule } from 'components';
+import { StaticColumnsModule } from 'components';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,10 @@ import { MyLibModule } from 'components';
     BrowserModule,
     FormsModule,
     HttpModule,
-    MyLibModule.forRoot()
+    StaticColumnsModule
+  ],
+  exports: [
+    StaticColumnsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

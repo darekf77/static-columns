@@ -38,19 +38,6 @@
     "url": "https://github.com/darekf77/static-columns/issues"
   },
   "homepage": "https://github.com/darekf77/static-columns#readme",
-  "isomorphicPackages": [
-    "browserify-sign",
-    "json10",
-    "lodash-walk-object",
-    "morphi",
-    "ng2-logger",
-    "ng2-rest",
-    "static-columns",
-    "timespan",
-    "tnp-bundle",
-    "typeorm",
-    "typescript-class-helpers"
-  ],
   "dependencies": {
     "@angular-devkit/build-optimizer": "^0.3.1",
     "@angular-devkit/schematics": "^0.0.42",
