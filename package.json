@@ -16,7 +16,7 @@
     "useFramework": false
   },
   "name": "static-columns",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "Static columns with flexbox for Agnular2",
   "repository": {
     "type": "git",
@@ -112,7 +112,7 @@
     "gulp-inline-ng2-template": "^4.1.0",
     "hammerjs": "^2.0.8",
     "html-webpack-plugin": "^2.29.0",
-    "incremental-compiler": "0.0.2",
+    "incremental-compiler": "0.0.9",
     "istanbul-instrumenter-loader": "^2.0.0",
     "jasmine-core": "~2.8.0",
     "jasmine-spec-reporter": "~4.2.0",
