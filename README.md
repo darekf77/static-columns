@@ -1,8 +1,6 @@
 ## static-columns##
 
-#Static Columns for Angular2 
-
-Compatible with https://github.com/AngularClass/angular2-webpack-starter
+#Static Columns for Angular2+
 
 Columns with static width mixed with responsive columns are 
 not a problem anymore!
