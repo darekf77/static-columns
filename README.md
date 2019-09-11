@@ -1,6 +1,6 @@
-## static-columns##
+## static-columns
 
-#Static Columns for Angular2+
+# Static Columns for Angular2+
 
 Columns with static width mixed with responsive columns are 
 not a problem anymore!
