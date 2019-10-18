@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-
+import { Resource } from 'ng2-rest';
 
 @Component({
   selector: 'app-root',
