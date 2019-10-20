@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { Resource } from 'ng2-rest';
+
+import { Log, Level } from 'ng2-logger';
 
 @Component({
   selector: 'app-root',
