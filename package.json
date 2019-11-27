@@ -253,7 +253,7 @@
     "url-loader": "^0.6.2",
     "validator": "^9.2.0",
     "watch": "~1.0.2",
-    "webpack-dev-server": "~2.9.3",
+    "webpack-dev-server": "~3.9.0",
     "zone.js": "~0.10.2"
   },
   "private": false,
