@@ -46,6 +46,7 @@ Thumbs.db
 /index.js
 /index.d.ts
 /index.js.map
+/src/index.html
 /tsconfig.isomorphic.json
 /tsconfig.browser.json
 /karma.conf.js.filetemplate
