@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { StaticColumnsModule } from 'components';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
+const workrPath = `ngsw-worker.js`;
+console.log(`Worker path: ${workrPath}`)
 @NgModule({
   declarations: [
     AppComponent
@@ -15,7 +17,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     BrowserModule,
     FormsModule,
     // HttpModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: true }),
+    ServiceWorkerModule.register(workrPath, { enabled: true }),
     StaticColumnsModule
   ],
   exports: [
