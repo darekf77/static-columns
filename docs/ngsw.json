@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1575434648080,
+  "timestamp": 1576091492475,
   "index": "static-columns/index.html",
   "assetGroups": [
     {
@@ -81,9 +81,9 @@
     "static-columns/assets/icons/icon-96x96.png": "ea0daa74f690d2642a19cc9e5f6fb51cdfc7689d",
     "static-columns/favicon.ico": "259d6faa476eac8db68a335975d23ef91aa3e448",
     "static-columns/index.html": "af93c0845ddc613cc6fcc52206f2e7e37bcbd92c",
-    "static-columns/main-es2015.js": "7a06e0520351d0164de595853d61e2adfe988ac6",
-    "static-columns/main-es5.js": "2964dac6bf058b68282ebdc09bb912b257f70f9d",
-    "static-columns/manifest.webmanifest": "a720d961a6b7211031da9c3a2f500cf4fb867515",
+    "static-columns/main-es2015.js": "0124ff29304022a3bd09e81ddff1403374657422",
+    "static-columns/main-es5.js": "469c1a2eb7becfd6bd097299f868b14a42e8d8e8",
+    "static-columns/manifest.webmanifest": "d2cace94a88da60991e9b678046439c22446dac3",
     "static-columns/polyfills-es2015.js": "2beeed50cb91dacd64f5f69b37008c8e7c4254a7",
     "static-columns/polyfills-es5.js": "12471574773d8a8610010e3a3caa58afb1ef6efe",
     "static-columns/runtime-es2015.js": "d5db3397a9ac50a48747b8727b71e0a1751d57fe",

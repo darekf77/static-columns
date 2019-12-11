@@ -1,6 +1,6 @@
 {
-  "name": "test-pwa",
-  "short_name": "test-pwa",
+  "name": "static-columns",
+  "short_name": "static-columns",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
