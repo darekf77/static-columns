@@ -1,11 +1,11 @@
 {
-  "name": "static-columns",
-  "short_name": "static-columns",
+  "name": "undefined",
+  "short_name": "undefined",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "/",
-  "start_url": "https://darekf77.github.io/static-columns/",
+  "start_url": "https://darekf77.github.io/undefined/",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
