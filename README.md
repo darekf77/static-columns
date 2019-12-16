@@ -12,12 +12,12 @@ How to install:
 
 Import it:
 
-    import { StaticColumnsModule } form "static-columns"
+    import { StaticColumnsModule } form "static-columns/browser"
 
 Put inside directives array:
 
     ...
-    imports: []StaticColumnsModule
+    imports: [StaticColumnsModule]
     ...
 
 Example:
