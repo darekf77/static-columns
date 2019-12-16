@@ -48,7 +48,6 @@ Thumbs.db
 /index.js
 /index.d.ts
 /index.js.map
-/tsconfig.isomorphic.json
 /tsconfig.browser.json
 /karma.conf.js.filetemplate
 /tsconfig.isomorphic.json.filetemplate
@@ -59,7 +58,6 @@ Thumbs.db
 /tsconfig.app.json.filetemplate
 /src/index.html.filetemplate
 /src/manifest.webmanifest.filetemplate
-/tsconfig.json
 /src/main.ts
 /src/polyfills.ts
 /protractor.conf.js
