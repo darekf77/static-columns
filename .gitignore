@@ -39,6 +39,7 @@ Thumbs.db
 /browserslist
 /ngsw-config.json
 /tsconfig.app.json
+/tsconfig.base.json
 /src/index.html
 /src/manifest.webmanifest
 /src/tsconfig.app.json
@@ -56,6 +57,7 @@ Thumbs.db
 /browserslist.filetemplate
 /ngsw-config.json.filetemplate
 /tsconfig.app.json.filetemplate
+/tsconfig.base.json.filetemplate
 /src/index.html.filetemplate
 /src/manifest.webmanifest.filetemplate
 /src/main.ts
@@ -63,5 +65,5 @@ Thumbs.db
 /protractor.conf.js
 /karma.conf.js
 
-!*.filetemplate
+*.filetemplate
 
