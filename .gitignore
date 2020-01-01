@@ -68,3 +68,5 @@ Thumbs.db
 
 *.filetemplate
 
+/tsconfig.browser.json
+/tsconfig.isomorphic.json.filetemplate

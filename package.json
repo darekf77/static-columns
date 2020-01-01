@@ -17,7 +17,7 @@
     "useFramework": false
   },
   "name": "static-columns",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Static columns with flexbox for Agnular2",
   "repository": {
     "type": "git",
@@ -170,7 +170,7 @@
     "mkdirp": "^0.5.1",
     "mocha": "^5.2.0",
     "moment": "^2.22.2",
-    "morphi": "3.0.4",
+    "morphi": "3.0.6",
     "ng-packagr": "^5.7.1",
     "ng2-file-upload": "^1.3.0",
     "ng2-logger": "3.0.11",
@@ -219,7 +219,7 @@
     "tslint": "~5.18.0",
     "typeorm": "0.2.7",
     "typescript": "3.7.4",
-    "typescript-class-helpers": "1.0.2",
+    "typescript-class-helpers": "1.0.3",
     "typescript-formatter": "7.2.2",
     "underscore": "^1.9.1",
     "validator": "^9.2.0",
