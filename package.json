@@ -14,7 +14,8 @@
       "dependencies": {}
     },
     "isGenerated": false,
-    "useFramework": false
+    "useFramework": false,
+    "linkedProjects": []
   },
   "name": "static-columns",
   "version": "1.0.6",
