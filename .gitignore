@@ -65,8 +65,9 @@ Thumbs.db
 /src/polyfills.ts
 /protractor.conf.js
 /karma.conf.js
+/tsconfig.browser.json.filetemplate
+/tsconfig.isomorphic.json.filetemplate
+
+
 
 *.filetemplate
-
-/tsconfig.browser.json
-/tsconfig.isomorphic.json.filetemplate
