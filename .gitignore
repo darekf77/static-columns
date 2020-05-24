@@ -35,6 +35,8 @@ Thumbs.db
 /tsconfig.isomorphic.json
 /tsconfig.json
 /src/tsconfig.app.json
+/.vscode/launch.json
+/.vscode/tasks.json
 /angular.json
 /browserslist
 /ngsw-config.json
@@ -55,6 +57,8 @@ Thumbs.db
 /karma.conf.js.filetemplate
 /tsconfig.isomorphic.json.filetemplate
 /tsconfig.json.filetemplate
+/.vscode/launch.json.filetemplate
+/.vscode/tasks.json.filetemplate
 /angular.json.filetemplate
 /browserslist.filetemplate
 /ngsw-config.json.filetemplate
