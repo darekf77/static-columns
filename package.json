@@ -15,7 +15,12 @@
     },
     "isGenerated": false,
     "useFramework": false,
-    "linkedProjects": []
+    "linkedProjects": [],
+    "libReleaseOptions": {
+      "nodts": false,
+      "obscure": false,
+      "ugly": false
+    }
   },
   "name": "static-columns",
   "version": "1.0.6",
