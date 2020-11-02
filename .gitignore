@@ -45,6 +45,7 @@ Thumbs.db
 /src/manifest.webmanifest
 /tsconfig.browser.json
 /tsconfig.isomorphic.json
+/components/tsconfig.json
 /src/tsconfig.app.json
 /.npmrc
 /tslint.json
