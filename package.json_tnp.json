@@ -1,0 +1,24 @@
+{
+  "resources": [
+    "README.md",
+    "screen.png"
+  ],
+  "isCoreProject": false,
+  "type": "angular-lib",
+  "version": "v2",
+  "overrided": {
+    "ignoreDepsPattern": [],
+    "includeAsDev": "*",
+    "includeOnly": [],
+    "dependencies": {},
+    "linkedFolders": []
+  },
+  "isGenerated": false,
+  "useFramework": false,
+  "linkedProjects": [],
+  "libReleaseOptions": {
+    "nodts": false,
+    "obscure": false,
+    "ugly": false
+  }
+}
