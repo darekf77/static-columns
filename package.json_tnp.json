@@ -20,5 +20,20 @@
     "nodts": false,
     "obscure": false,
     "ugly": false
-  }
+  },
+  "license": "MIT",
+  "private": false,
+  "description": "Static columns with flexbox for Agnular2",
+  "author": "Dariusz Filipiak",
+  "homepage": "https://github.com/darekf77/static-columns#readme",
+  "keywords": [
+    "angular2",
+    "static",
+    "width",
+    "column",
+    "static",
+    "columns",
+    "flexbox",
+    "columns"
+  ]
 }
