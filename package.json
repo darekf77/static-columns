@@ -259,7 +259,7 @@
     "socket.io": "^2.0.4",
     "sort-package-json": "^1.11.0",
     "sqlite3": "4.0.9",
-    "static-columns": "~1.0.12",
+    "static-columns": "~1.0.13",
     "string-similarity": "~4.0.2",
     "sudo-block": "~3.0.0",
     "svg-png-converter": "0.0.9",
@@ -294,5 +294,5 @@
       "pre-push": "tnp deps:show:if:standalone"
     }
   },
-  "lastBuildTagHash": "a2e67c2a23cee5ae3d9aeabad786c991ef4c6b13"
+  "lastBuildTagHash": "6fbc344a79c757cb28e8113c7a56ab0a015968a2"
 }
