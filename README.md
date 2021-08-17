@@ -6,23 +6,25 @@ Columns with static width mixed with responsive columns are
 not a problem anymore!
 
 How to install:
-
+```
     npm install static-columns --save
+```
 
 
 Import it:
-
+```ts
     import { StaticColumnsModule } form "static-columns/browser"
+```
 
 Put inside directives array:
-
-    ...
+```ts
+    // ...
     imports: [StaticColumnsModule]
-    ...
-
+    // ...
+```
 Example:
 	
-
+```html
     <columns-container>
         <column grow >
     	  // responsive columns
@@ -31,7 +33,8 @@ Example:
        <column width="190">                        
            // static column here
        </column>
-     <columns-container>
+     </columns-container>
+```
 
 ![Modules marked](screen.png)
 
