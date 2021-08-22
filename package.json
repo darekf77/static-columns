@@ -68,7 +68,7 @@
       "pre-push": "tnp deps:show:if:standalone"
     }
   },
-  "lastBuildTagHash": "6e8f3f3f034b9ce8ead9cfbf240cb053f87df403",
+  "lastBuildTagHash": "c124fe09b2b26f18683b026cebe108704c1759e7",
   "devDependencies": {
     "@angular-devkit/build-angular": "0.901.3",
     "@angular-devkit/build-optimizer": "0.900.0-rc.7",
@@ -265,7 +265,7 @@
     "sloc": "0.2.0",
     "socket.io": "2.4.1",
     "sort-package-json": "1.11.0",
-    "static-columns": "~1.0.23",
+    "static-columns": "~1.0.29",
     "string-similarity": "4.0.2",
     "sudo-block": "3.0.0",
     "systeminformation": "3.45.7",
