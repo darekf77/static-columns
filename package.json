@@ -39,7 +39,7 @@
     ]
   },
   "name": "static-columns",
-  "version": "1.0.26",
+  "version": "1.0.28",
   "description": "Static columns with flexbox for Agnular2",
   "repository": {
     "type": "git",
