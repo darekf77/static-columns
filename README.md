@@ -14,6 +14,10 @@ How to install:
 Import it:
 ```ts
     import { StaticColumnsModule } form "static-columns/browser"
+  // or for angular aot
+    import { StaticColumnsModule } form "static-columns/browser/angular"
+
+
 ```
 
 Put inside directives array:
