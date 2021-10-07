@@ -1,7 +1,5 @@
-
-
 import { Level } from './level';
-import { Helpers } from 'tnp-core/browser';
+import { Helpers } from 'tnp-core';
 import { consoleLog, displayParams } from './backend-logging';
 
 

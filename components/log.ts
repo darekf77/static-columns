@@ -1,8 +1,6 @@
-
-
 import { Logger } from './logger';
 import { Level, LevelOrder, LevelKey } from './level';
-import { Helpers } from 'tnp-core/browser';
+import { Helpers } from 'tnp-core';
 
 
 

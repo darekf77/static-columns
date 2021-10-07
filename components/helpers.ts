@@ -1,4 +1,1 @@
-
-
-export { Helpers } from 'tnp-config/browser';
-
+export { Helpers } from 'tnp-config';
