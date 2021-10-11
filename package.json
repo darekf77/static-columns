@@ -63,7 +63,7 @@
   "homepage": "https://github.com/darekf77/static-columns#readme",
   "dependencies": {},
   "private": false,
-  "lastBuildTagHash": "43c0343db1a8f40c91ddf14fb41fd89dfefb553e",
+  "lastBuildTagHash": "773c035367ff7bf140324f58a284b0ae9b5cff88",
   "devDependencies": {
     "@angular-devkit/build-angular": "12.2.8",
     "@angular-devkit/build-optimizer": "0.1202.8",
@@ -273,7 +273,7 @@
     "sloc": "0.2.0",
     "socket.io": "2.4.1",
     "sort-package-json": "1.11.0",
-    "static-columns": "~2.0.3",
+    "static-columns": "~2.0.4",
     "string-similarity": "4.0.2",
     "sudo-block": "3.0.0",
     "systeminformation": "3.45.7",
