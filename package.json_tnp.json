@@ -35,5 +35,6 @@
     "columns",
     "flexbox",
     "columns"
-  ]
+  ],
+  "workerPlugins": {}
 }
