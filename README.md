@@ -1,6 +1,6 @@
 ## static-columns
 
-# Static Columns for Angular2+
+# Static Columns for Angular2+ (compatible now with 12+)
 
 Columns with static width mixed with responsive columns are 
 not a problem anymore!
@@ -14,10 +14,6 @@ How to install:
 Import it:
 ```ts
     import { StaticColumnsModule } form "static-columns/browser"
-  // or for angular aot
-    import { StaticColumnsModule } form "static-columns/browser/angular"
-
-
 ```
 
 Put inside directives array:
@@ -34,7 +30,7 @@ Example:
     	  // responsive columns
           // you also create nested container like this
       </column>
-       <column width="190">                        
+       <column [width]="190">                        
            // static column here
        </column>
      </columns-container>
