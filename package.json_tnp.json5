@@ -3,9 +3,6 @@
     "README.md",
     "screen.png"
   ],
-  "isCoreProject": false,
-  "type": "angular-lib",
-  "version": "v3",
   "overrided": {
     "ignoreDepsPattern": [],
     "includeAsDev": "*",
@@ -13,14 +10,17 @@
     "dependencies": {},
     "linkedFolders": []
   },
-  "isGenerated": false,
-  "useFramework": false,
   "linkedProjects": [],
   "libReleaseOptions": {
     "nodts": false,
     "obscure": false,
     "ugly": false
   },
+  "isCoreProject": false,
+  "type": "isomorphic-lib",
+  "version": "v3",
+  "isGenerated": false,
+  "useFramework": false,
   "license": "MIT",
   "private": false,
   "description": "Static columns with flexbox for Agnular2",

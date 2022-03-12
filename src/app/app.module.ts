@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 // import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { StaticColumnsModule } from 'components';
+import { StaticColumnsModule } from '../lib';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
 const workrPath = `ngsw-worker.js`;
