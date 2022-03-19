@@ -24,5 +24,6 @@
   "homepage": "https://github.com/darekf77/static-columns#readme",
   "dependencies": {},
   "private": false,
-  "lastBuildTagHash": "905655e05d069bedf8f712425f484c22ddeb3f7c"
+  "lastBuildTagHash": "905655e05d069bedf8f712425f484c22ddeb3f7c",
+  "devDependencies": {}
 }
