@@ -227,7 +227,7 @@
     "sloc": "0.2.0",
     "socket.io": "2.4.1",
     "sort-package-json": "1.11.0",
-    "static-columns": "~13.0.20",
+    "static-columns": "~13.0.21",
     "string-similarity": "4.0.2",
     "sudo-block": "3.0.0",
     "systeminformation": "3.45.7",
@@ -255,6 +255,6 @@
     "zone.js": "~0.11.4"
   },
   "private": false,
-  "lastBuildTagHash": "5e92a7db2626d2823f037b3d6f5470a737d68ab0",
+  "lastBuildTagHash": "3e8968be71af365a2cd4ac85407d74e083a12736",
   "devDependencies": {}
 }
