@@ -227,7 +227,7 @@
     "socket.io": "2.4.1",
     "sort-package-json": "1.11.0",
     "sql.js": "1.8.0",
-    "static-columns": "~13.1.25",
+    "static-columns": "~13.1.26",
     "string-similarity": "4.0.2",
     "sudo-block": "3.0.0",
     "systeminformation": "3.45.7",
@@ -255,6 +255,6 @@
     "zone.js": "~0.11.4"
   },
   "private": false,
-  "lastBuildTagHash": "3cd368ab0f9acc7b7db6813abd5cd6528f140df6",
+  "lastBuildTagHash": "52279323cf2e3862f8b4ba459f5036fefeadf1ff",
   "devDependencies": {}
 }
