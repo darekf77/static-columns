@@ -1,3 +1,4 @@
+//#region @browser
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -27,3 +28,4 @@ console.log(`Worker path: ${workrPath}`)
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+//#endregion

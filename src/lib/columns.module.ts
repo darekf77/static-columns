@@ -1,3 +1,4 @@
+//#region @browser
 import { NgModule } from '@angular/core';
 
 import { ColumnComponent, DirectiveGrow } from './column';
@@ -21,3 +22,4 @@ import { ColumnsComponent } from './columns.component';
   providers: [],
 })
 export class StaticColumnsModule { }
+//#endregion

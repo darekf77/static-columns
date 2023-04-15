@@ -1,3 +1,4 @@
+//#region @browser
 import { Component, OnInit, ViewEncapsulation, ViewChildren, QueryList } from '@angular/core';
 import { ColumnComponent } from './column';
 // import { Log, Level } from 'ng2-logger/index';
@@ -17,3 +18,4 @@ export class ColumnsComponent implements OnInit {
     }
     ngOnInit() { }
 }
+//#endregion

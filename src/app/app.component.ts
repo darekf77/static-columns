@@ -1,3 +1,4 @@
+//#region @browser
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { SwUpdate } from '@angular/service-worker';
@@ -35,3 +36,4 @@ export class AppComponent {
   }
 
 }
+//#endregion
