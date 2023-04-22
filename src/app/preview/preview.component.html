@@ -1,25 +1,23 @@
-<mat-card>
-  <columns-container>
-    <column width="200"
-            hideTablet>
+<columns-container class="top">
+  <column width="200"
+          hideTablet>
 
-    </column>
-    <column grow
-            style="min-width: 700px">
-      <img src="src/assets/logo.png"
-           height="30px">
-      <span>
-        This is a demo of <strong>static-columns</strong> angular component.
-      </span>
-    </column>
-    <column width="200"
-            hideMobile>
+  </column>
+  <column grow
+          class="header">
+    <img src="src/assets/logo.png"
+         height="30px">
+    <span>
+      This is a demo of <strong>static-columns</strong> angular component.
+    </span>
+  </column>
+  <column width="200"
+          hideMobile> </column>
+  <column width="100"
+          showMobile> </column>
 
-    </column>
+</columns-container>
 
-  </columns-container>
-
-</mat-card>
 <columns-container>
   <column [width]="200">
     <h3>

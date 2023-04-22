@@ -1,10 +1,20 @@
 //#region @browser
 import { NgModule } from '@angular/core';
 import { LayoutModule } from '@angular/cdk/layout';
-import { ColumnComponent, DirectiveGrow, DirectiveHideTablet } from './column';
+import { ColumnComponent, DirectiveGrow, DirectiveHideTablet, DirectiveShowMobile } from './column';
 import { DirectiveHideMobile } from './column/column-hide-mobile.directive';
 import { ColumnsGapComponent } from './columns-gap/columns-gap.component';
 import { ColumnsComponent } from './columns.component';
+
+const components = [
+  ColumnsComponent,
+  ColumnComponent,
+  DirectiveGrow,
+  DirectiveHideMobile,
+  DirectiveHideTablet,
+  DirectiveShowMobile,
+  ColumnsGapComponent,
+];
 
 @NgModule({
   imports: [
@@ -12,20 +22,10 @@ import { ColumnsComponent } from './columns.component';
   ],
   exports: [
     LayoutModule,
-    ColumnsComponent,
-    ColumnComponent,
-    DirectiveGrow,
-    DirectiveHideMobile,
-    DirectiveHideTablet,
-    ColumnsGapComponent,
+    ...components,
   ],
   declarations: [
-    ColumnsComponent,
-    ColumnComponent,
-    DirectiveGrow,
-    DirectiveHideMobile,
-    DirectiveHideTablet,
-    ColumnsGapComponent,
+    ...components,
   ],
   providers: [],
 })

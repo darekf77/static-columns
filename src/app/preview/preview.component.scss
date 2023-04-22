@@ -2,23 +2,25 @@
   display: block;
 }
 
-mat-card {
-  padding       : 23px;
-  position      : relative;
-  top           : -8px;
-  left          : -12px;
-  width         : calc(100% + 20px);
-  vertical-align: middle;
+.top {
+  background           : transparent;
+  // -webkit-box-shadow: 0 6px 14px -4px black;
+  // -moz-box-shadow   : 0 6px 14px -4px black;
+  box-shadow           : -12px 6px 14px -14px black;
 
   span {
-    max-width: 200px;
-    top        : -6px;
-    position   : relative;
-    margin-left: 20px;
+    top          : -6px;
+    position     : relative;
+    margin-left  : 20px;
   }
 
 
   img {
     display: inline-block;
   }
+}
+
+
+.header {
+  padding: 20px;
 }

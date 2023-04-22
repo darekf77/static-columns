@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1682196414604,
+  "timestamp": 1682198706451,
   "index": "/static-columns/index.html",
   "assetGroups": [
     {
@@ -11,13 +11,13 @@
         "ignoreVary": true
       },
       "urls": [
-        "/static-columns/784.3b20e0bd495be440.js",
+        "/static-columns/744.51af95aef56adad0.js",
         "/static-columns/favicon.ico",
         "/static-columns/index.html",
-        "/static-columns/main.4003b5c8900cfee3.js",
+        "/static-columns/main.ee42a6b1dee36297.js",
         "/static-columns/manifest.webmanifest",
         "/static-columns/polyfills.a07cf3ca57c17527.js",
-        "/static-columns/runtime.396a302eb33241ed.js",
+        "/static-columns/runtime.1a51f8b4ead32518.js",
         "/static-columns/styles.106adc5fefc24396.css"
       ],
       "patterns": []
@@ -131,7 +131,7 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/static-columns/784.3b20e0bd495be440.js": "04467f2ccc8256d43a308d8a9ccada43f21bfe07",
+    "/static-columns/744.51af95aef56adad0.js": "c4317a5df8d41426fed8124ec582b7a277aebae1",
     "/static-columns/assets/assets-for/static-columns/favicon.ico": "a8bf209bd6e9ae6ba87e757f348c96f98360dbc7",
     "/static-columns/assets/assets-for/static-columns/favicons/android-chrome-192x192.png": "6ec81c46122dea33285f7f4f341148a4b305e7ea",
     "/static-columns/assets/assets-for/static-columns/favicons/android-chrome-512x512.png": "d584fa7f2378a3c11ad5b7d06bf4bdaa31806d84",
@@ -228,11 +228,11 @@
     "/static-columns/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/static-columns/assets/sql-wasm.wasm": "fcc42ce03c2b5af20e90acc2b75263acc502d736",
     "/static-columns/favicon.ico": "a8bf209bd6e9ae6ba87e757f348c96f98360dbc7",
-    "/static-columns/index.html": "36fe7a318c3dcdc39eb5e20b13cc8f4a82e2a919",
-    "/static-columns/main.4003b5c8900cfee3.js": "db1da225dd451045c2140399976a74b3d6f16d25",
+    "/static-columns/index.html": "9643d365a6784b84a4264647af9624e109d4cc48",
+    "/static-columns/main.ee42a6b1dee36297.js": "321008be70b8c2ac131c4dec951515e1ecd0e9e2",
     "/static-columns/manifest.webmanifest": "e8fd203be71440bb0b471dd21c62472f446ee1e2",
     "/static-columns/polyfills.a07cf3ca57c17527.js": "01e78bb029d75e39d44a1dfc81fa86c477585315",
-    "/static-columns/runtime.396a302eb33241ed.js": "057882c7e73fa973c3ef46e6aa9345b5032b32db",
+    "/static-columns/runtime.1a51f8b4ead32518.js": "53c42b9b0892de23ea77b8fa7d95453109e3d50b",
     "/static-columns/styles.106adc5fefc24396.css": "aa07ccf2b1035fdd3bf6d0314bf46de212c3e2e9"
   },
   "navigationUrls": [
