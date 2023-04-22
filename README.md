@@ -22,20 +22,37 @@ Put inside directives array:
     imports: [StaticColumnsModule]
     // ...
 ```
-Example:
+
+# Examples
 	
+ ## Basic usage:
 ```html
-    <columns-container>
-        <column grow >
-    	  // responsive columns
-          // you also create nested container like this
-      </column>
-       <column [width]="190">                        
-           // static column here
-       </column>
-     </columns-container>
+<columns-container>
+  <column grow > <!-- this column will grow/shring based on screen witdh -->
+    something
+  </column>
+  <column width="190">                        
+      <button>ZAKRES</button>
+  </column>
+  <column width="190">                        
+      <button-magnifier></button-magnifier>
+      <button-bell></button-bell>
+      <button-gears></button-gears>
+  </column>
+</columns-container>
 ```
 
 ![Modules marked](screen.png)
 
 
+## Hide/show column in mobile view:
+```html
+<columns-container>
+  <column hideMobile >
+      I am not visible when screen < 600px
+  </column>
+  <column  showMobile>                        
+      I am visible only when screen < 600px
+  </column>
+</columns-container>
+```
