@@ -1,0 +1,6 @@
+{
+  "build": true,
+  "prod": true,
+  "websql": true,
+  "projName": "static-columns"
+}
