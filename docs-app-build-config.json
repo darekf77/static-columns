@@ -3,7 +3,7 @@
 {
   "build": true,
   "prod": true,
-  "websql": true,
+  "websql": false,
   "projName": "static-columns"
 }
 
