@@ -1,26 +1,46 @@
 ## static-columns
 
-# Static Columns for Angular2+ (compatible now with 12+)
+# Static Columns for Angular2+
 
-Columns with static width mixed with responsive columns are 
-not a problem anymore!
+With this simple library 
 
-How to install:
+**angular / html columns with static width**
+
+mixed with
+ 
+**columns with responsive width**
+ 
+are not a problem anymore!
+
+
+---
+### How to install:
 ```
     npm install static-columns --save
 ```
 
 
-Import it:
+### Import it:
 ```ts
-    import { StaticColumnsModule } form "static-columns/browser"
+import { StaticColumnsModule } form "static-columns/browser"
 ```
 
-Put inside directives array:
+### Or in firedev's apps (not need for */browser* suffix ):
 ```ts
-    // ...
-    imports: [StaticColumnsModule]
-    // ...
+import { StaticColumnsModule } form "static-columns"
+```
+
+### Put inside angular module imports array:
+```ts
+
+@NgModule(
+ // ... 
+  imports: [StaticColumnsModule]
+  // ... 
+)
+class MyExampleModule {
+ // ... 
+}
 ```
 
 # Examples
