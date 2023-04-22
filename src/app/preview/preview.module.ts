@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { PreviewComponent } from './preview.component';
 import { StaticColumnsModule } from '../../lib/columns.module';
+import { FiredevGithubForkMeCornerModule, FiredevFullMaterialModule, FiredevGithubForkMeRibbonModule } from 'firedev-ui';
 
 const routes: Routes = [
   {
@@ -19,6 +20,9 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
+    FiredevGithubForkMeRibbonModule,
+    FiredevGithubForkMeCornerModule,
+    FiredevFullMaterialModule,
     StaticColumnsModule,
     CommonModule,
     RouterModule.forChild(routes),

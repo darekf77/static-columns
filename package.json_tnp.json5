@@ -5,7 +5,7 @@
   ],
 
   "overrided": {
-    "ignoreDepsPattern": [],
+    "ignoreDepsPattern": ['*'],
     "includeAsDev": [],
     "includeOnly": [],
     "dependencies": {},

@@ -1,3 +1,24 @@
 :host {
   display: block;
 }
+
+mat-card {
+  padding       : 23px;
+  position      : relative;
+  top           : -8px;
+  left          : -12px;
+  width         : calc(100% + 20px);
+  vertical-align: middle;
+
+  span {
+    max-width: 200px;
+    top        : -6px;
+    position   : relative;
+    margin-left: 20px;
+  }
+
+
+  img {
+    display: inline-block;
+  }
+}
