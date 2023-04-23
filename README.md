@@ -48,7 +48,7 @@ class MyExampleModule {
  ## Basic usage:
 ```html
 <columns-container>
-  <column grow > <!-- this column will grow/shring based on screen witdh -->
+  <column grow > <!-- this column will grow/shring based on screen width -->
     something
   </column>
   <column width="190">                        
