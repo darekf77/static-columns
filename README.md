@@ -25,12 +25,7 @@ are not a problem anymore!
 import { StaticColumnsModule } form "static-columns/browser"
 ```
 
-### Or in firedev's apps (not need for */browser* suffix ):
-```ts
-import { StaticColumnsModule } form "static-columns"
-```
-
-### Put inside angular module imports array:
+### Put module inside angular imports:
 ```ts
 
 @NgModule(
