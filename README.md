@@ -1,6 +1,7 @@
-## static-columns
 
-# Static Columns for Angular2+
+# STATIC-COLUMNS - effortless Angular2+ layouts
+
+# forget about flex box complicated rules !
 
 With this simple library 
 
