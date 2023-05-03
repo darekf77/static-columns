@@ -5,14 +5,14 @@ import { BreakpointsService } from '../breakpoints.service';
 import { BaseHideShowDirective } from './base-hide-show.directive';
 
 @Directive({
-  selector: '[hideTablet]'
+  selector: '[showTablet]'
 })
-export class DirectiveHideTablet extends BaseHideShowDirective {
+export class DirectiveShowTablet  extends BaseHideShowDirective {
   action(state: 'mobile' | 'tablet' | 'desktop') {
     if (state === 'tablet') {
-      this.hideElement();
-    } else {
       this.showElement();
+    } else {
+      this.hideElement();
     }
   }
 }

@@ -1,42 +1,18 @@
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { Component, Directive, ElementRef, OnInit, Renderer2 } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
-
+import { BreakpointsService } from '../breakpoints.service';
+import { BaseHideShowDirective } from './base-hide-show.directive';
 
 @Directive({
   selector: '[hideMobile]'
 })
-export class DirectiveHideMobile implements OnInit {
-
-  $destroy = new Subject();
-  constructor(
-    public e: ElementRef,
-    public renderer: Renderer2,
-    public breakpointObserver: BreakpointObserver,
-  ) { }
-
-  private originalDisaplay: string;
-
-  ngOnInit() {
-    this.breakpointObserver
-      .observe(['(min-width: 600px)'])
-      .pipe(takeUntil(this.$destroy))
-      .subscribe((state: BreakpointState) => {
-        if (typeof this.originalDisaplay === 'undefined') {
-          this.originalDisaplay = (this.e.nativeElement as HTMLElement).style.display;
-        }
-        if (state.matches) {
-          this.renderer.setStyle(this.e.nativeElement, 'display', this.originalDisaplay)
-        } else {
-          this.renderer.setStyle(this.e.nativeElement, 'display', 'none')
-        }
-      })
+export class DirectiveHideMobile extends BaseHideShowDirective {
+  action(state: 'mobile' | 'tablet' | 'desktop') {
+    if (state === 'mobile') {
+      this.hideElement();
+    } else {
+      this.showElement();
+    }
   }
-
-  ngOnDestroy(): void {
-    this.$destroy.next(void 0);
-    this.$destroy.complete()
-  }
-
 }
-

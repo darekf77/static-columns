@@ -1,10 +1,19 @@
 //#region @browser
 import { NgModule } from '@angular/core';
 import { LayoutModule } from '@angular/cdk/layout';
-import { ColumnComponent, DirectiveGrow, DirectiveHideTablet, DirectiveShowMobile } from './column';
-import { DirectiveHideMobile } from './column/column-hide-mobile.directive';
+import {
+  ColumnComponent, DirectiveGrow,
+  DirectiveHideDesktop,
+  DirectiveHideTablet,
+  DirectiveHideMobile,
+  DirectiveShowDesktop,
+  DirectiveShowMobile,
+  DirectiveShowTablet,
+} from './column';
 import { ColumnsGapComponent } from './columns-gap/columns-gap.component';
 import { ColumnsComponent } from './columns.component';
+import { BreakpointsService } from './breakpoints.service';
+
 
 const components = [
   ColumnsComponent,
@@ -12,7 +21,10 @@ const components = [
   DirectiveGrow,
   DirectiveHideMobile,
   DirectiveHideTablet,
+  DirectiveHideDesktop,
+  DirectiveShowTablet,
   DirectiveShowMobile,
+  DirectiveShowDesktop,
   ColumnsGapComponent,
 ];
 
@@ -27,7 +39,7 @@ const components = [
   declarations: [
     ...components,
   ],
-  providers: [],
+  providers: [BreakpointsService],
 })
 export class StaticColumnsModule { }
 //#endregion
