@@ -72,3 +72,28 @@ class MyExampleModule {
   </column>
 </columns-container>
 ```
+
+## Hide/show column in tablet view:
+```html
+<columns-container>
+  <column hideTablet >
+      I am not visible when screen > 600px and < 840 px
+  </column>
+  <column  showTablet>                        
+      I am visible only when screen > 600px and < 840 px
+  </column>
+</columns-container>
+```
+
+
+## Hide/show column in desktop view:
+```html
+<columns-container>
+  <column hideDesktop >
+      I am not visible when screen > 840 px
+  </column>
+  <column  showDesktop>                        
+      I am visible only when screen > 840 px
+  </column>
+</columns-container>
+```
