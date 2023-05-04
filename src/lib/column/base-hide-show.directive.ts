@@ -18,9 +18,6 @@ export abstract class BaseHideShowDirective {
 
   private originalDisaplay: string;
 
-  ngOnInit() {
-
-  }
 
   abstract action(state: "mobile" | "tablet" | "desktop");
 
@@ -32,7 +29,7 @@ export abstract class BaseHideShowDirective {
     this.renderer.setStyle(this.e.nativeElement, 'display', this.originalDisaplay)
   }
 
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
     //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
     //Add 'implements AfterViewInit' to the class.
     this.breakpoints
@@ -42,7 +39,7 @@ export abstract class BaseHideShowDirective {
         if (typeof this.originalDisaplay === 'undefined') {
           this.originalDisaplay = (this.e.nativeElement as HTMLElement).style.display;
         }
-        console.log(`state for actin: ${state}`)
+        // console.log(`state for actin: ${state}`)
         this.action(state);
       })
   }
