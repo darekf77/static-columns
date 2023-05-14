@@ -3,6 +3,13 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { _ } from 'tnp-core';
 
+const BRK = {
+  mobile: '(max-width: 599.98px)',
+  // tablet: obsvious
+  desktop: '(min-width: 840.00px)',
+}
+
+
 @Injectable({ providedIn: 'root' })
 export class BreakpointsService {
 
@@ -13,28 +20,23 @@ export class BreakpointsService {
     breakpointObserver: BreakpointObserver,
   ) {
 
-    breakpointObserver.observe([Breakpoints.XSmall, Breakpoints.Tablet, Breakpoints.Web]).subscribe((state) => {
-      // console.log(state.breakpoints)
-      if (!_.isUndefined(Breakpoints.XSmall.split(', ').find(f => state.breakpoints[f]))) {
+    breakpointObserver.observe([BRK.mobile, BRK.desktop]).subscribe((state) => {
+      if (!_.isUndefined([BRK.mobile].find(f => state.breakpoints[f]))) {
         this.sub.next('mobile');
-      } else if (!_.isUndefined(Breakpoints.Tablet.split(', ').find(f => state.breakpoints[f]))) {
-        this.sub.next('tablet');
-      } else if (!_.isUndefined(Breakpoints.Web.split(', ').find(f => state.breakpoints[f]))) {
+      } else if (!_.isUndefined([BRK.desktop].find(f => state.breakpoints[f]))) {
         this.sub.next('desktop');
+      } else {
+        this.sub.next('tablet');
       }
     });
 
     setTimeout(() => {
-      if (breakpointObserver.isMatched([Breakpoints.XSmall])) {
+      if (breakpointObserver.isMatched([BRK.mobile])) {
         this.sub.next('mobile');
-      }
-
-      if (breakpointObserver.isMatched([Breakpoints.Tablet])) {
-        this.sub.next('tablet');
-      }
-
-      if (breakpointObserver.isMatched([Breakpoints.Web])) {
+      } else if (breakpointObserver.isMatched([BRK.desktop])) {
         this.sub.next('desktop');
+      } else {
+        this.sub.next('tablet');
       }
     })
   }
