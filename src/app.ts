@@ -28,15 +28,11 @@ const routes: Routes = [
   styleUrls: ['./app.scss'],
   templateUrl: './app.html',
 })
-export class StaticColumnsComponent implements OnInit {
+export class StaticColumnsComponent {
   constructor(
     private ngZone: NgZone
   ) { }
 
-  async ngOnInit() {
-    Firedev.initNgZone(this.ngZone);
-    await start();
-  }
 }
 //#endregion
 
