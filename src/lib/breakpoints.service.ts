@@ -14,28 +14,40 @@ const BRK = {
 export class BreakpointsService {
 
   private sub = new Subject<'mobile' | 'tablet' | 'desktop'>();
-  public listenTo = this.sub.asObservable();
+  public listenTo() {
+    setTimeout(()=> {
+      this.sub.next(this.current);
+    });
+    return this.sub.asObservable();
+  }
 
+  private current: 'mobile' | 'tablet' | 'desktop';
   constructor(
     breakpointObserver: BreakpointObserver,
   ) {
 
     breakpointObserver.observe([BRK.mobile, BRK.desktop]).subscribe((state) => {
       if (!_.isUndefined([BRK.mobile].find(f => state.breakpoints[f]))) {
+        this.current = 'mobile';
         this.sub.next('mobile');
       } else if (!_.isUndefined([BRK.desktop].find(f => state.breakpoints[f]))) {
+        this.current = 'desktop';
         this.sub.next('desktop');
       } else {
+        this.current = 'tablet';
         this.sub.next('tablet');
       }
     });
 
     setTimeout(() => {
       if (breakpointObserver.isMatched([BRK.mobile])) {
+        this.current = 'mobile';
         this.sub.next('mobile');
       } else if (breakpointObserver.isMatched([BRK.desktop])) {
+        this.current = 'desktop';
         this.sub.next('desktop');
       } else {
+        this.current = 'tablet';
         this.sub.next('tablet');
       }
     })
