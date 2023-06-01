@@ -5,8 +5,8 @@
   ],
 
   "overrided": {
-    "ignoreDepsPattern": ['*'],
-    "includeAsDev": [],
+    "ignoreDepsPattern": [],
+    "includeAsDev": '*',
     "includeOnly": [],
     "dependencies": {},
     "linkedFolders": [],
