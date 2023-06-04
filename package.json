@@ -1,6 +1,6 @@
 {
   "name": "static-columns",
-  "version": "13.3.7",
+  "version": "13.3.8",
   "description": "Static columns with flexbox for Agnular2",
   "repository": {
     "type": "git",
@@ -22,7 +22,10 @@
     "url": "https://github.com/darekf77/static-columns/issues"
   },
   "homepage": "https://github.com/darekf77/static-columns#readme",
-  "dependencies": {
+  "dependencies": {},
+  "private": false,
+  "lastBuildTagHash": "8c005a807444412645b840c7109418874863075b",
+  "devDependencies": {
     "@angular-devkit/build-angular": "~13.3.9",
     "@angular-devkit/core": "~13.3.9",
     "@angular-material-extensions/fab-menu": "~6.1.0",
@@ -265,8 +268,5 @@
     "watch": "1.0.2",
     "yup": "1.1.1",
     "zone.js": "~0.11.4"
-  },
-  "private": false,
-  "lastBuildTagHash": "8c005a807444412645b840c7109418874863075b",
-  "devDependencies": {}
+  }
 }
