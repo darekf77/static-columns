@@ -1,6 +1,6 @@
 {
   "name": "static-columns",
-  "version": "13.3.6",
+  "version": "13.3.7",
   "description": "Static columns with flexbox for Agnular2",
   "repository": {
     "type": "git",
@@ -22,10 +22,7 @@
     "url": "https://github.com/darekf77/static-columns/issues"
   },
   "homepage": "https://github.com/darekf77/static-columns#readme",
-  "dependencies": {},
-  "private": false,
-  "lastBuildTagHash": "8c005a807444412645b840c7109418874863075b",
-  "devDependencies": {
+  "dependencies": {
     "@angular-devkit/build-angular": "~13.3.9",
     "@angular-devkit/core": "~13.3.9",
     "@angular-material-extensions/fab-menu": "~6.1.0",
@@ -36,6 +33,7 @@
     "@angular/compiler": "~13.3.0",
     "@angular/compiler-cli": "~13.3.0",
     "@angular/core": "~13.3.0",
+    "@angular/elements": "~13.3.0",
     "@angular/flex-layout": "~13.0.0-beta.38",
     "@angular/forms": "~13.3.0",
     "@angular/material": "~13.3.9",
@@ -119,7 +117,7 @@
     "concurrently": "3.5.1",
     "content-type": "1.0.4",
     "cookie-parser": "1.4.3",
-    "copy-paste": "1.3.0",
+    "copy-paste": "1.5.3",
     "cors": "2.8.4",
     "cpr": "3.0.1",
     "cross-spawn": "7.0.3",
@@ -170,7 +168,7 @@
     "json-stringify-safe": "5.0.1",
     "json10": "~13.1.44",
     "json10-writer": "~13.1.40",
-    "json5": "2.1.3",
+    "json5": "2.2.1",
     "json5-writer": "0.2.0",
     "jszip": "3.10.1",
     "karma": "6.3.0",
@@ -182,7 +180,7 @@
     "lnk": "1.0.1",
     "localforage": "1.10.0",
     "lockfile": "1.0.4",
-    "lodash": "4.17.4",
+    "lodash": "4.17.20",
     "lodash-walk-object": "~13.1.44",
     "lowdb": "1.0.0",
     "magic-renamer": "~13.1.41",
@@ -191,7 +189,7 @@
     "minimist": "1.2.0",
     "mkdirp": "0.5.1",
     "mocha": "5.2.0",
-    "moment": "2.22.2",
+    "moment": "2.29.3",
     "morphi": "~13.2.11",
     "ng-in-viewport": "13.0.1",
     "ng-packagr": "13.0.0",
@@ -254,6 +252,7 @@
     "ts-loader": "2.3.1",
     "ts-node": "10.7.0",
     "tslib": "~2.3.0",
+    "turndown": "7.1.2",
     "typeorm": "~0.3.10",
     "typescript": "~4.6.2",
     "typescript-class-helpers": "~13.2.12",
@@ -266,5 +265,8 @@
     "watch": "1.0.2",
     "yup": "1.1.1",
     "zone.js": "~0.11.4"
-  }
+  },
+  "private": false,
+  "lastBuildTagHash": "8c005a807444412645b840c7109418874863075b",
+  "devDependencies": {}
 }
