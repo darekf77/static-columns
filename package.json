@@ -1,4 +1,49 @@
 {
+  "tnp": {
+    "resources": [
+      "README.md",
+      "screen.png"
+    ],
+    "overrided": {
+      "ignoreDepsPattern": [],
+      "includeAsDev": "*",
+      "includeOnly": [],
+      "dependencies": {},
+      "linkedFolders": [],
+      "npmFixes": []
+    },
+    "linkedProjects": [],
+    "smartContainerBuildTarget": "",
+    "linkedRepos": [],
+    "libReleaseOptions": {
+      "nodts": false,
+      "obscure": false,
+      "ugly": false,
+      "includeNodeModules": false
+    },
+    "smartContainerTarget": "",
+    "type": "isomorphic-lib",
+    "isCoreProject": false,
+    "version": "v4",
+    "isGenerated": false,
+    "useFramework": false,
+    "license": "MIT",
+    "private": false,
+    "description": "Static columns with flexbox for Agnular2",
+    "author": "Dariusz Filipiak",
+    "homepage": "https://github.com/darekf77/static-columns#readme",
+    "keywords": [
+      "angular2",
+      "static",
+      "width",
+      "column",
+      "static",
+      "columns",
+      "flexbox",
+      "columns"
+    ],
+    "workerPlugins": {}
+  },
   "name": "static-columns",
   "version": "16.0.3",
   "description": "Static columns with flexbox for Agnular2",
