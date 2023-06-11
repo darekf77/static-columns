@@ -29,6 +29,10 @@ export abstract class BaseHideShowDirective {
     this.renderer.setStyle(this.e.nativeElement, 'display', this.originalDisaplay)
   }
 
+  protected scale(scale: number = 1) {
+    this.renderer.setStyle(this.e.nativeElement, 'transform', `scale(${scale})`)
+  }
+
   ngOnInit(): void {
     //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
     //Add 'implements AfterViewInit' to the class.

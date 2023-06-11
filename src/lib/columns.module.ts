@@ -9,6 +9,9 @@ import {
   DirectiveShowDesktop,
   DirectiveShowMobile,
   DirectiveShowTablet,
+  DirectiveShrinkOnMobile50,
+  DirectiveShrinkOnMobile,
+  DirectiveShrinkOnTablet,
 } from './column';
 import { ColumnsGapComponent } from './columns-gap/columns-gap.component';
 import { ColumnsComponent } from './columns.component';
@@ -26,6 +29,9 @@ const components = [
   DirectiveShowMobile,
   DirectiveShowDesktop,
   ColumnsGapComponent,
+  DirectiveShrinkOnMobile50,
+  DirectiveShrinkOnMobile,
+  DirectiveShrinkOnTablet,
 ];
 
 @NgModule({
