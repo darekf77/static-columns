@@ -1,11 +1,12 @@
 //#region @notForNpm
 //#region imports
 import { Firedev } from 'firedev';
-const host = 'http://localhost:4199';
+import { HOST_BACKEND_PORT } from './app.hosts';
 //#region @browser
 import { NgModule, NgZone, ViewEncapsulation } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
+
 //#endregion
 //#endregion
 
@@ -55,6 +56,7 @@ export class StaticColumnsModule { }
 
 //#region firedev start function
 async function start() {
+  const host = `http://localhost:${HOST_BACKEND_PORT}`;
   // Firedev.enableProductionMode();
 
   const context = await Firedev.init({
