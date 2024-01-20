@@ -1,11 +1,18 @@
+
+import { CLIENT_DEV_NORMAL_APP_PORT, CLIENT_DEV_WEBSQL_APP_PORT } from './app.hosts';
+import {
+  path,
+  //#region @backend
+  fse
+  //#endregion
+} from 'tnp-core';
 //#region @backend
 import { app, BrowserWindow, screen } from 'electron';
-import * as path from 'path';
-import * as fs from 'fs';
 
 let win: BrowserWindow | null = null;
-const args = process.argv.slice(1),
-  serve = args.some(val => val === '--serve');
+const args = process.argv.slice(1);
+const serve = args.some(val => val === '--serve');
+const websql = args.some(val => val === '--websql');
 
 function createWindow(): BrowserWindow {
 
@@ -15,6 +22,7 @@ function createWindow(): BrowserWindow {
   win = new BrowserWindow({
     x: 0,
     y: 0,
+    // autoHideMenuBar: true,
     width: size.width / 2,
     height: size.height / 2,
     webPreferences: {
@@ -29,12 +37,12 @@ function createWindow(): BrowserWindow {
     debug();
 
     require('electron-reloader')(module);
-    win.loadURL('http://localhost:4200');
+    win.loadURL('http://localhost:' + (websql ? CLIENT_DEV_WEBSQL_APP_PORT : CLIENT_DEV_NORMAL_APP_PORT));
   } else {
     // Path when running electron executable
     let pathIndex = './index.html';
 
-    if (fs.existsSync(path.join(__dirname, '../dist/index.html'))) {
+    if (fse.existsSync(path.join(__dirname, '../dist/index.html'))) {
       // Path when running electron in local folder
       pathIndex = '../dist/index.html';
     }
