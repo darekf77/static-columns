@@ -6,5 +6,6 @@ src/
 /tests
 tsconfig.json
 npm-debug.log*
+.npmrc
 tslint.json
 .editorconfig
