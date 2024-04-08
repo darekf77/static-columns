@@ -7,7 +7,7 @@
       "name": "Launch Server standalone",
       "program": "${workspaceFolder}/run.js",
       "args": [
-        "port=4506",
+        "port=4404",
         "--ENVoverride=%7B%0A%20%20%20%20%22clientProjectName%22%3A%20%22static-columns%22%0A%7D "
       ],
       "runtimeArgs": [
@@ -28,7 +28,7 @@
       "runtimeArgs": [
         "--serve",
         ".",
-        "--remote-debugging-port=9876"
+        "--remote-debugging-port=9880"
       ],
       "windows": {
         "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron.cmd"
