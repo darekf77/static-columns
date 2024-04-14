@@ -32,6 +32,8 @@ win = new BrowserWindow({
   },
 });
 
+win.webContents.openDevTools();
+
 if (serve) {
   const debug = require('electron-debug');
   debug();
@@ -94,4 +96,4 @@ try {
 }
 
 startElectron();
-//#endregion  
+//#endregion
