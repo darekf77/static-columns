@@ -23,8 +23,8 @@ win = new BrowserWindow({
   x: 0,
   y: 0,
   autoHideMenuBar: true,
-  width: size.width / 2,
-  height: size.height / 2,
+  width: size.width / 1.5,
+  height: size.height / 1.5,
   webPreferences: {
     nodeIntegration: true,
     allowRunningInsecureContent: (serve),
@@ -32,7 +32,7 @@ win = new BrowserWindow({
   },
 });
 
-win.webContents.openDevTools();
+  win.webContents.openDevTools();
 
 if (serve) {
   const debug = require('electron-debug');
