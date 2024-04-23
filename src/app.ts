@@ -76,11 +76,11 @@ async function start() {
     //#endregion
   });
   //#region @backend
-  if (Firedev.isNode) {
-    context.node.app.get('/hello', (req, res) => {
-      res.send('Hello static-columns')
-    })
-  }
+  // if (Firedev.isNode) {
+  //   context.node.app.get('/hello', (req, res) => {
+  //     res.send('Hello static-columns')
+  //   })
+  // }
   //#endregion
 }
 //#endregion

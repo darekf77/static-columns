@@ -8,6 +8,7 @@ fse
 } from 'tnp-core';
 //#region @backend
 import { app, BrowserWindow, screen } from 'electron';
+import start from './app';
 
 let win: BrowserWindow | null = null;
 const args = process.argv.slice(1);
@@ -23,8 +24,8 @@ win = new BrowserWindow({
   x: 0,
   y: 0,
   autoHideMenuBar: true,
-  width: size.width / 1.5,
-  height: size.height / 1.5,
+  width: size.width * (3/4),
+  height: size.height * (3/4),
   webPreferences: {
     nodeIntegration: true,
     allowRunningInsecureContent: (serve),
@@ -32,11 +33,10 @@ win = new BrowserWindow({
   },
 });
 
-  win.webContents.openDevTools();
-
 if (serve) {
   const debug = require('electron-debug');
   debug();
+
 
   require('electron-reloader')(module);
   win.loadURL('http://localhost:' + (websql ? CLIENT_DEV_WEBSQL_APP_PORT : CLIENT_DEV_NORMAL_APP_PORT));
@@ -53,6 +53,8 @@ if (serve) {
   win.loadURL(url.href);
 }
 
+win.webContents.openDevTools();
+
 // Emitted when the window is closed.
 win.on('closed', () => {
   // Dereference the window object, usually you would store window
@@ -65,34 +67,36 @@ return win;
 }
 
 async function startElectron() {
-try {
-  // This method will be called when Electron has finished
-  // initialization and is ready to create browser windows.
-  // Some APIs can only be used after this event occurs.
-  // Added 400 ms to fix the black background issue while using transparent window. More detais at https://github.com/electron/electron/issues/15947
-  app.on('ready', () => setTimeout(createWindow, 400));
+  await start();
+  try {
+    // This method will be called when Electron has finished
+    // initialization and is ready to create browser windows.
+    // Some APIs can only be used after this event occurs.
+    // Added 400 ms to fix the black background issue while using transparent window. More detais at https://github.com/electron/electron/issues/15947
+    // app.on('ready', () => setTimeout(createWindow, 400));
+    setTimeout(createWindow, 400)
 
-  // Quit when all windows are closed.
-  app.on('window-all-closed', () => {
-    // On OS X it is common for applications and their menu bar
-    // to stay active until the user quits explicitly with Cmd + Q
-    if (process.platform !== 'darwin') {
-      app.quit();
-    }
-  });
+    // Quit when all windows are closed.
+    app.on('window-all-closed', () => {
+      // On OS X it is common for applications and their menu bar
+      // to stay active until the user quits explicitly with Cmd + Q
+      if (process.platform !== 'darwin') {
+        app.quit();
+      }
+    });
 
-  app.on('activate', () => {
-    // On OS X it's common to re-create a window in the app when the
-    // dock icon is clicked and there are no other windows open.
-    if (win === null) {
-      createWindow();
-    }
-  });
+    app.on('activate', () => {
+      // On OS X it's common to re-create a window in the app when the
+      // dock icon is clicked and there are no other windows open.
+      if (win === null) {
+        createWindow();
+      }
+    });
 
-} catch (e) {
-  // Catch Error
-  // throw e;
-}
+  } catch (e) {
+    // Catch Error
+    throw e;
+  }
 }
 
 startElectron();
