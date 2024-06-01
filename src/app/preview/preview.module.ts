@@ -4,7 +4,11 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { PreviewComponent } from './preview.component';
 import { StaticColumnsModule } from '../../lib/columns.module';
-import { FiredevGithubForkMeCornerModule, FiredevFullMaterialModule, FiredevGithubForkMeRibbonModule } from 'firedev-ui';
+import {
+  FiredevGithubForkMeCornerModule,
+  FiredevFullMaterialModule,
+  FiredevGithubForkMeRibbonModule,
+} from 'firedev-ui/src';
 
 const routes: Routes = [
   {
@@ -29,5 +33,5 @@ const routes: Routes = [
   ],
   declarations: [PreviewComponent],
 })
-export class PreviewModule { }
+export class PreviewModule {}
 //#endregion

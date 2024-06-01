@@ -1,8 +1,5 @@
 {
-  "resources": [
-    "README.md",
-    "screen.png"
-  ],
+  "resources": ["README.md", "screen.png"],
 
   "overrided": {
     "ignoreDepsPattern": [],
@@ -48,7 +45,7 @@
     "static",
     "columns",
     "flexbox",
-    "columns"
+    "columns",
   ],
 
   "workerPlugins": {},

@@ -1,4 +1,3 @@
-
 // import { CLIENT_DEV_NORMAL_APP_PORT, CLIENT_DEV_WEBSQL_APP_PORT } from './app.hosts';
 // import {
 // path,
@@ -36,7 +35,6 @@
 // if (serve) {
 //   const debug = require('electron-debug');
 //   debug();
-
 
 //   require('electron-reloader')(module);
 //   win.loadURL('http://localhost:' + (websql ? CLIENT_DEV_WEBSQL_APP_PORT : CLIENT_DEV_NORMAL_APP_PORT));

@@ -1,5 +1,13 @@
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
-import { Component, Directive, ElementRef, Host, OnInit, Optional, Renderer2 } from '@angular/core';
+import {
+  Component,
+  Directive,
+  ElementRef,
+  Host,
+  OnInit,
+  Optional,
+  Renderer2,
+} from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { BreakpointsService } from '../breakpoints.service';
 import { BaseHideShowDirective } from './base-hide-show.directive';
@@ -7,10 +15,9 @@ import { BaseHideShowDirective } from './base-hide-show.directive';
 // import { DirectiveShrinkOnMobile } from './shrink-on-mobile75.directive';
 
 @Directive({
-  selector: '[shrinkOnTablet]'
+  selector: '[shrinkOnTablet]',
 })
 export class DirectiveShrinkOnTablet extends BaseHideShowDirective {
-
   constructor(
     public e: ElementRef,
     public renderer: Renderer2,
@@ -25,7 +32,6 @@ export class DirectiveShrinkOnTablet extends BaseHideShowDirective {
     //   this.scale(0.75)
     // } else {
     //   if (state === 'mobile' && (this.mobile50 || this.mobile75)) {
-
     //   } else {
     //     this.scale()
     //   }

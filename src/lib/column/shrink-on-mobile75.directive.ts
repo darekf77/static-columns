@@ -1,12 +1,20 @@
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
-import { Component, Directive, ElementRef, Host, OnInit, Optional, Renderer2 } from '@angular/core';
+import {
+  Component,
+  Directive,
+  ElementRef,
+  Host,
+  OnInit,
+  Optional,
+  Renderer2,
+} from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { BreakpointsService } from '../breakpoints.service';
 import { BaseHideShowDirective } from './base-hide-show.directive';
 import { DirectiveShrinkOnTablet } from './shrink-on-tablet.directive';
 
 @Directive({
-  selector: '[shrinkOnMobile]'
+  selector: '[shrinkOnMobile]',
 })
 export class DirectiveShrinkOnMobile extends BaseHideShowDirective {
   scaleFactor = 75;
@@ -21,12 +29,12 @@ export class DirectiveShrinkOnMobile extends BaseHideShowDirective {
 
   action(state: 'mobile' | 'tablet' | 'desktop') {
     if (state === 'mobile') {
-      this.scale(0.75)
+      this.scale(0.75);
     } else {
       // if (state === 'tablet' && this.tablet75) {
 
       // } else {
-      this.scale()
+      this.scale();
       // }
     }
   }

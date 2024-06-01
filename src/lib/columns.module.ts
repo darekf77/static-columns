@@ -2,7 +2,8 @@
 import { NgModule } from '@angular/core';
 import { LayoutModule } from '@angular/cdk/layout';
 import {
-  ColumnComponent, DirectiveGrow,
+  ColumnComponent,
+  DirectiveGrow,
   DirectiveHideDesktop,
   DirectiveHideTablet,
   DirectiveHideMobile,
@@ -16,7 +17,6 @@ import {
 import { ColumnsGapComponent } from './columns-gap/columns-gap.component';
 import { ColumnsComponent } from './columns.component';
 import { BreakpointsService } from './breakpoints.service';
-
 
 const components = [
   ColumnsComponent,
@@ -35,17 +35,10 @@ const components = [
 ];
 
 @NgModule({
-  imports: [
-    LayoutModule,
-  ],
-  exports: [
-    LayoutModule,
-    ...components,
-  ],
-  declarations: [
-    ...components,
-  ],
+  imports: [LayoutModule],
+  exports: [LayoutModule, ...components],
+  declarations: [...components],
   providers: [BreakpointsService],
 })
-export class StaticColumnsModule { }
+export class StaticColumnsModule {}
 //#endregion
