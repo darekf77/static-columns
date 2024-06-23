@@ -36,6 +36,12 @@
         "c:/Users/darek/projects/npm/firedev-io/tnp-helpers/tmp-dist-release/dist/project/tnp-helpers/src/../dist/**/*.js",
         "c:/Users/darek/projects/npm/firedev-io/tnp-models/tmp-dist-release/dist/project/tnp-models/src/../dist/**/*.js",
         "c:/Users/darek/projects/npm/firedev-io/typescript-class-helpers/tmp-dist-release/dist/project/typescript-class-helpers/src/../dist/**/*.js",
+        "c:/Users/darek/projects/npm/cli-tools/navi-cli/src/../dist/**/*.js",
+        "c:/Users/darek/projects/npm/cli-tools/p1-cli/src/../dist/**/*.js",
+        "c:/Users/darek/projects/npm/firedev-projects/application-quiz/src/../dist/**/*.js",
+        "c:/Users/darek/projects/npm/firedev-io/firedev/projects/examples/circural-deps-ctx/src/../dist/**/*.js",
+        "c:/Users/darek/projects/npm/firedev-io/firedev/projects/examples/crud/src/../dist/**/*.js",
+        "c:/Users/darek/projects/npm/firedev-io/firedev/projects/examples/inject-tests/src/../dist/**/*.js",
         "c:/Users/darek/projects/npm/firedev-io/firedev-simple-org/tmp-dist-release/dist/project/firedev-simple-org/main/src/lib/../dist/**/*.js",
         "c:/Users/darek/projects/npm/firedev-io/firedev-simple-org/tmp-dist-release/dist/project/firedev-simple-org/second/src/lib/../dist/**/*.js",
         "c:/Users/darek/projects/npm/firedev-io/firedev-simple-org/tmp-dist-release/dist/project/firedev-simple-org/third/src/lib/../dist/**/*.js"
@@ -44,6 +50,7 @@
         "--nolazy",
         "-r",
         "ts-node/register",
+        "--preserve-symlinks",
         "--experimental-worker"
       ]
     },
