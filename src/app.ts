@@ -10,21 +10,26 @@ import { CommonModule } from '@angular/common';
 //#endregion
 
 console.log('hello world');
-console.log('Your server will start on port '+ HOST_BACKEND_PORT);
+console.log('Your server will start on port ' + HOST_BACKEND_PORT);
 const host = 'http://localhost:' + HOST_BACKEND_PORT;
 
 //#region static-columns component
 //#region @browser
 @Component({
   selector: 'app-static-columns',
-  template: `hello from static-columns<br>
-    <br>
+  template: `hello from static-columns<br />
+    <br />
     users from backend
     <ul>
-      <li *ngFor="let user of (users$ | async)"> {{ user | json }} </li>
-    </ul>
-  `,
-  styles: [` body { margin: 0px !important; } `],
+      <li *ngFor="let user of users$ | async">{{ user | json }}</li>
+    </ul> `,
+  styles: [
+    `
+      body {
+        margin: 0px !important;
+      }
+    `,
+  ],
 })
 export class StaticColumnsComponent {
   userApiService = inject(UserApiService);
@@ -36,15 +41,14 @@ export class StaticColumnsComponent {
 //#region  static-columns api service
 //#region @browser
 @Injectable({
-  providedIn:'root'
+  providedIn: 'root',
 })
 export class UserApiService {
-  userControlller = Firedev.inject(()=> MainContext.get(UserController))
+  userControlller = Firedev.inject(() => MainContext.getClass(UserController));
   getAll() {
-    return this.userControlller.getAll()
-      .received
-      .observable
-      .pipe(map(r => r.body.json));
+    return this.userControlller
+      .getAll()
+      .received.observable.pipe(map(r => r.body.json));
   }
 }
 //#endregion
@@ -57,7 +61,7 @@ export class UserApiService {
   imports: [CommonModule],
   declarations: [StaticColumnsComponent],
 })
-export class StaticColumnsModule { }
+export class StaticColumnsModule {}
 //#endregion
 //#endregion
 
@@ -75,7 +79,7 @@ class User extends Firedev.Base.AbstractEntity {
 //#region  static-columns controller
 @Firedev.Controller({ className: 'UserController' })
 class UserController extends Firedev.Base.CrudController<User> {
-  entityClassResolveFn = ()=> User;
+  entityClassResolveFn = () => User;
   //#region @websql
   async initExampleDbData(): Promise<void> {
     const superAdmin = new User();
@@ -87,10 +91,10 @@ class UserController extends Firedev.Base.CrudController<User> {
 //#endregion
 
 //#region  static-columns context
-const MainContext = Firedev.createContext(()=>({
+const MainContext = Firedev.createContext(() => ({
   host,
   contextName: 'MainContext',
-  contexts:{ BaseContext },
+  contexts: { BaseContext },
   controllers: {
     UserController,
     // PUT FIREDEV CONTORLLERS HERE
@@ -105,12 +109,12 @@ const MainContext = Firedev.createContext(()=>({
 //#endregion
 
 async function start() {
-
   await MainContext.initialize();
 
   if (Firedev.isBrowser) {
-    const users = (await MainContext.getClassInstance(UserController).getAll().received)
-      .body?.json;
+    const users = (
+      await MainContext.getClassInstance(UserController).getAll().received
+    ).body?.json;
     console.log({
       'users from backend': users,
     });
