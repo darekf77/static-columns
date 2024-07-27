@@ -45,7 +45,7 @@ export class StaticColumnsComponent {
 })
 export class UserApiService {
   userControlller = Firedev.inject(() => MainContext.getClass(UserController));
-  getAll() {
+  getAll() { 'asd'
     return this.userControlller
       .getAll()
       .received.observable.pipe(map(r => r.body.json));
