@@ -7,7 +7,7 @@
     "includeOnly": [],
     "dependencies": {},
     "linkedFolders": [],
-    "npmFixes": [],
+    "npmFixes": []
   },
 
   "linkedProjects": [],
@@ -22,13 +22,13 @@
     "cliBuildNoDts": false,
     "cliBuildObscure": false,
     "cliBuildIncludeNodeModules": false,
-    "cliBuildUglify": false,
+    "cliBuildUglify": false
   },
 
   "smartContainerTarget": "",
   "type": "isomorphic-lib",
   "isCoreProject": false,
-  "version": "v16",
+  "version": "v18",
   "isGenerated": false,
   "useFramework": false,
   "license": "MIT",
@@ -45,8 +45,8 @@
     "static",
     "columns",
     "flexbox",
-    "columns",
+    "columns"
   ],
 
-  "workerPlugins": {},
+  "workerPlugins": {}
 }
