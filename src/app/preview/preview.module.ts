@@ -5,10 +5,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { PreviewComponent } from './preview.component';
 import { StaticColumnsModule } from '../../lib/columns.module';
 import {
-  FiredevGithubForkMeCornerModule,
-  FiredevFullMaterialModule,
-  FiredevGithubForkMeRibbonModule,
-} from 'firedev-ui/src';
+  TaonGithubForkMeCornerModule,
+  TaonFullMaterialModule,
+  TaonGithubForkMeRibbonModule,
+} from 'taon-ui/src';
 
 const routes: Routes = [
   {
@@ -24,9 +24,9 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    FiredevGithubForkMeRibbonModule,
-    FiredevGithubForkMeCornerModule,
-    FiredevFullMaterialModule,
+    TaonGithubForkMeRibbonModule,
+    TaonGithubForkMeCornerModule,
+    TaonFullMaterialModule,
     StaticColumnsModule,
     CommonModule,
     RouterModule.forChild(routes),

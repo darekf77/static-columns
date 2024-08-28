@@ -1,5 +1,5 @@
 //#region imports
-import { Firedev, BaseContext } from 'firedev/src';
+import { Taon, BaseContext } from 'taon/lib';
 import { Observable, map } from 'rxjs';
 import { HOST_BACKEND_PORT } from './app.hosts';
 //#region @browser
@@ -44,7 +44,7 @@ export class StaticColumnsComponent {
   providedIn: 'root',
 })
 export class UserApiService {
-  userControlller = Firedev.inject(() => MainContext.getClass(UserController));
+  userControlller = Taon.inject(() => MainContext.getClass(UserController));
   getAll() {
     return this.userControlller
       .getAll()
@@ -66,19 +66,19 @@ export class StaticColumnsModule {}
 //#endregion
 
 //#region  static-columns entity
-@Firedev.Entity({ className: 'User' })
-class User extends Firedev.Base.AbstractEntity {
+@Taon.Entity({ className: 'User' })
+class User extends Taon.Base.AbstractEntity {
   public static ctrl?: UserController;
   //#region @websql
-  @Firedev.Orm.Column.String()
+  @Taon.Orm.Column.String()
   //#endregion
   name?: string;
 }
 //#endregion
 
 //#region  static-columns controller
-@Firedev.Controller({ className: 'UserController' })
-class UserController extends Firedev.Base.CrudController<User> {
+@Taon.Controller({ className: 'UserController' })
+class UserController extends Taon.Base.CrudController<User> {
   entityClassResolveFn = () => User;
   //#region @websql
   async initExampleDbData(): Promise<void> {
@@ -91,7 +91,7 @@ class UserController extends Firedev.Base.CrudController<User> {
 //#endregion
 
 //#region  static-columns context
-const MainContext = Firedev.createContext(() => ({
+const MainContext = Taon.createContext(() => ({
   host,
   contextName: 'MainContext',
   contexts: { BaseContext },
@@ -111,7 +111,7 @@ const MainContext = Firedev.createContext(() => ({
 async function start() {
   await MainContext.initialize();
 
-  if (Firedev.isBrowser) {
+  if (Taon.isBrowser) {
     const users = (
       await MainContext.getClassInstance(UserController).getAll().received
     ).body?.json;
