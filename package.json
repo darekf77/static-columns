@@ -49,7 +49,7 @@
     "workerPlugins": {}
   },
   "name": "static-columns",
-  "version": "18.0.11",
+  "version": "18.0.12",
   "description": "Static columns with flexbox for Agnular2",
   "repository": {
     "type": "git",
