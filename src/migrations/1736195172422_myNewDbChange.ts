@@ -1,5 +1,5 @@
-import { Taon } from 'taon';
-import { QueryRunner } from 'taon-typeorm';
+import { Taon } from 'taon/src';
+import { QueryRunner } from 'taon-typeorm/src';
 
 @Taon.Migration({
   className: 'MainContext_1736195172422_myNewDbChange',
