@@ -46,7 +46,8 @@
       "flexbox",
       "columns"
     ],
-    "workerPlugins": {}
+    "workerPlugins": {},
+    "packageJsonOverride": {}
   },
   "name": "static-columns",
   "version": "18.0.21",

@@ -48,5 +48,6 @@
     "columns"
   ],
 
-  "workerPlugins": {}
+  "workerPlugins": {},
+  "packageJsonOverride": {}
 }
