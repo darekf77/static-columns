@@ -64,7 +64,6 @@ Thumbs.db
 # =====================
 !taon.jsonc
 *.filetemplate
-
 /.vscode/launch.json
 /*.sqlite
 /*.rest

@@ -1,38 +1,10 @@
 {
-  "tnp": {
-    "resources": [
-      "README.md",
-      "screen.png"
-    ],
-    "type": "isomorphic-lib",
-    "isCoreProject": false,
-    "version": "v18",
-    "packageJsonOverride": {
-      "author": "Dariusz Filipiak",
-      "bugs": {
-        "url": "https://github.com/darekf77/static-columns/issues"
-      },
-      "description": "Static columns with flexbox for Agnular2",
-      "homepage": "https://github.com/darekf77/static-columns#readme",
-      "keywords": [
-        "angular2",
-        "static",
-        "width",
-        "column",
-        "static",
-        "columns",
-        "flexbox",
-        "columns"
-      ],
-      "license": "MIT",
-      "private": false,
-      "repository": {
-        "type": "git",
-        "url": "git+https://github.com/darekf77/static-columns.git"
-      }
-    }
-  },
+  "name": "static-columns",
+  "version": "18.0.21",
+  "license": "MIT",
   "author": "Dariusz Filipiak",
+  "private": false,
+  "homepage": "https://github.com/darekf77/static-columns#readme",
   "bugs": {
     "url": "https://github.com/darekf77/static-columns/issues"
   },
@@ -350,7 +322,6 @@
     "zone.js": "~0.13.0"
   },
   "description": "Static columns with flexbox for Agnular2",
-  "homepage": "https://github.com/darekf77/static-columns#readme",
   "keywords": [
     "angular2",
     "static",
@@ -361,12 +332,8 @@
     "flexbox",
     "columns"
   ],
-  "license": "MIT",
-  "name": "static-columns",
-  "private": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/darekf77/static-columns.git"
-  },
-  "version": "18.0.21"
+  }
 }

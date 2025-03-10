@@ -1,9 +1,9 @@
 {
-  "resources": ["README.md", "screen.png"],
-
   "type": "isomorphic-lib",
-  "isCoreProject": false,
+
   "version": "v18",
+  "isCoreProject": false,
+  "resources": ["README.md", "screen.png"],
   "packageJsonOverride": {
     "author": "Dariusz Filipiak",
 
