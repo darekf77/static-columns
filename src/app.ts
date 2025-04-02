@@ -87,9 +87,9 @@ class UserController extends Taon.Base.CrudController<User> {
   entityClassResolveFn = ()=> User;
   //#region @websql
   async initExampleDbData(): Promise<void> {
-    // const superAdmin = new User();
-    // superAdmin.name = 'super-admin';
-    // await this.db.save(superAdmin);
+    const superAdmin = new User();
+    superAdmin.name = 'super-admin';
+    await this.db.save(superAdmin);
   }
   //#endregion
 }
@@ -106,7 +106,7 @@ var MainContext = Taon.createContext(()=>({
     // PUT TAON CONTROLLERS HERE
   },
   entities: {
-    // User,
+    User,
     // PUT TAON ENTITIES HERE
   },
   database: true,
