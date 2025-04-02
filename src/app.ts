@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
 import { VERSION } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { Taon, BaseContext } from 'taon/src';
-import { Helpers } from 'tnp-core/src';
+import { Helpers, UtilsOs } from 'tnp-core/src';
 
 import {
   HOST_BACKEND_PORT,
@@ -36,7 +36,7 @@ const frontendHost =
   styles: [` body { margin: 0px !important; } `],
 })
 export class StaticColumnsComponent {
-  angularVersion = VERSION.full;
+  angularVersion = VERSION.full + ` mode: ${UtilsOs.isRunningInWebSQL() ? ' (websql)' : '(normal)'}`;
   userApiService = inject(UserApiService);
   readonly users$: Observable<User[]> = this.userApiService.getAll();
 }
