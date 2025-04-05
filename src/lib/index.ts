@@ -7,3 +7,8 @@ export * from './columns.component';
 //#region @browser
 export * from './columns.module';
 //#endregion
+//#region @backend
+export function backendUseInfo(): void {
+  console.log('Static Columns should not be used on backend');
+}
+//#endregion
