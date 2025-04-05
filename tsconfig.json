@@ -2,15 +2,7 @@
   "extends": "./tsconfig.isomorphic.json",
   "compilerOptions": {
     "strictNullChecks": false,
-    "rootDir": "./src",
-    "paths": {
-      "static-columns": [
-        "./src/lib"
-      ],
-      "static-columns/*": [
-        "./src/lib/*"
-      ]
-    }
+    "rootDir": "./src"
   },
   "include": [
     "src/**/*"

@@ -1,8 +1,10 @@
 import type { EnvOptions } from 'tnp/src';
+import baseEnv from '../../env';
+
 const env: Partial<EnvOptions> = {
-  website: {
-    domain: 'static-columns.example.domain.com',
-    title: 'Static Columns',
+  ...baseEnv,
+  build: {
+    ...baseEnv.build,
   },
 };
 export default env;
