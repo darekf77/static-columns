@@ -1,37 +1,42 @@
 //#region imports
-import { Taon, BaseContext } from 'taon/src';
-import { Observable, map } from 'rxjs';
-import { HOST_BACKEND_PORT } from './app.hosts';
-//#region @browser
+import { CommonModule } from '@angular/common';
 import { NgModule, inject, Injectable } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-//#endregion
+import { VERSION } from '@angular/core';
+import { Observable, map } from 'rxjs';
+import { Taon, BaseContext } from 'taon/src';
+import { Helpers, UtilsOs } from 'tnp-core/src';
+
+import {
+  HOST_BACKEND_PORT,
+  CLIENT_DEV_WEBSQL_APP_PORT,
+  CLIENT_DEV_NORMAL_APP_PORT,
+} from './app.hosts';
 //#endregion
 
 console.log('hello world');
-console.log('Your server will start on port ' + HOST_BACKEND_PORT);
+console.log('Your server will start on port '+ HOST_BACKEND_PORT);
 const host = 'http://localhost:' + HOST_BACKEND_PORT;
+const frontendHost =
+  'http://localhost:' +
+  (Helpers.isWebSQL ? CLIENT_DEV_WEBSQL_APP_PORT : CLIENT_DEV_NORMAL_APP_PORT);
 
 //#region static-columns component
 //#region @browser
 @Component({
   selector: 'app-static-columns',
-  template: `hello from static-columns<br />
-    <br />
+  template: `hello from static-columns<br>
+    Angular version: {{ angularVersion }}<br>
+    <br>
     users from backend
     <ul>
-      <li *ngFor="let user of users$ | async">{{ user | json }}</li>
-    </ul> `,
-  styles: [
-    `
-      body {
-        margin: 0px !important;
-      }
-    `,
-  ],
+      <li *ngFor="let user of (users$ | async)"> {{ user | json }} </li>
+    </ul>
+  `,
+  styles: [` body { margin: 0px !important; } `],
 })
 export class StaticColumnsComponent {
+  angularVersion = VERSION.full + ` mode: ${UtilsOs.isRunningInWebSQL() ? ' (websql)' : '(normal)'}`;
   userApiService = inject(UserApiService);
   readonly users$: Observable<User[]> = this.userApiService.getAll();
 }
@@ -41,14 +46,15 @@ export class StaticColumnsComponent {
 //#region  static-columns api service
 //#region @browser
 @Injectable({
-  providedIn: 'root',
+  providedIn:'root'
 })
 export class UserApiService {
-  userControlller = Taon.inject(() => MainContext.getClass(UserController));
+  userController = Taon.inject(()=> MainContext.getClass(UserController))
   getAll() {
-    return this.userControlller
-      .getAll()
-      .received.observable.pipe(map(r => r.body.json));
+    return this.userController.getAll()
+      .received
+      .observable
+      .pipe(map(r => r.body.json));
   }
 }
 //#endregion
@@ -61,14 +67,13 @@ export class UserApiService {
   imports: [CommonModule],
   declarations: [StaticColumnsComponent],
 })
-export class StaticColumnsModule {}
+export class StaticColumnsModule { }
 //#endregion
 //#endregion
 
 //#region  static-columns entity
 @Taon.Entity({ className: 'User' })
 class User extends Taon.Base.AbstractEntity {
-  public static ctrl?: UserController;
   //#region @websql
   @Taon.Orm.Column.String()
   //#endregion
@@ -79,7 +84,7 @@ class User extends Taon.Base.AbstractEntity {
 //#region  static-columns controller
 @Taon.Controller({ className: 'UserController' })
 class UserController extends Taon.Base.CrudController<User> {
-  entityClassResolveFn = () => User;
+  entityClassResolveFn = ()=> User;
   //#region @websql
   async initExampleDbData(): Promise<void> {
     const superAdmin = new User();
@@ -91,30 +96,31 @@ class UserController extends Taon.Base.CrudController<User> {
 //#endregion
 
 //#region  static-columns context
-const MainContext = Taon.createContext(() => ({
+var MainContext = Taon.createContext(()=>({
   host,
+  frontendHost,
   contextName: 'MainContext',
-  contexts: { BaseContext },
+  contexts:{ BaseContext },
   controllers: {
     UserController,
-    // PUT FIREDEV CONTORLLERS HERE
+    // PUT TAON CONTROLLERS HERE
   },
   entities: {
     User,
-    // PUT FIREDEV ENTITIES HERE
+    // PUT TAON ENTITIES HERE
   },
   database: true,
-  disabledRealtime: true,
+  // disabledRealtime: true,
 }));
 //#endregion
 
 async function start() {
+
   await MainContext.initialize();
 
   if (Taon.isBrowser) {
-    const users = (
-      await MainContext.getClassInstance(UserController).getAll().received
-    ).body?.json;
+    const users = (await MainContext.getClassInstance(UserController).getAll().received)
+      .body?.json;
     console.log({
       'users from backend': users,
     });
