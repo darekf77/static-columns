@@ -8,9 +8,9 @@
     },
   ],
 
-  "peerDependenciesNamesForNpmLib": ["angular/core", "rxjs", "@angular/cdk"],
-
   "isCoreProject": false,
+
+  "peerDependenciesNamesForNpmLib": ["angular/core", "rxjs", "@angular/cdk"],
   "resources": ["README.md", "screen.png"],
 
   "packageJsonOverride": {
