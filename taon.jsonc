@@ -2,9 +2,13 @@
   "type": "isomorphic-lib",
   "version": "v18",
 
-  "autoReleaseConfigAllowedItems": [{
-    "artifactName": "npm-lib-and-cli-tool"
-  }],
+  "autoReleaseConfigAllowedItems": [
+    {
+      "artifactName": "npm-lib-and-cli-tool",
+    },
+  ],
+
+  "peerDependenciesNamesForNpmLib": ["angular/core", "rxjs", "@angular/cdk"],
 
   "isCoreProject": false,
   "resources": ["README.md", "screen.png"],
@@ -16,7 +20,7 @@
       "url": "https://github.com/darekf77/static-columns/issues",
     },
 
-    "description": "Static columns with flexbox for Agnular2",
+    "description": "Static columns with flex-box for Angular 2+",
     "homepage": "https://github.com/darekf77/static-columns#readme",
 
     "keywords": [
@@ -26,7 +30,7 @@
       "column",
       "static",
       "columns",
-      "flexbox",
+      "flex-box",
       "columns",
     ],
 
@@ -37,5 +41,5 @@
       "type": "git",
       "url": "git+https://github.com/darekf77/static-columns.git",
     },
-  }
+  },
 }
