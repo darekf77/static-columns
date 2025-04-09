@@ -15,11 +15,7 @@
         "!**/node_modules/**"
       ],
       "runtimeArgs": [
-        "--nolazy",
-        "-r",
-        "ts-node/register",
-        "--preserve-symlinks",
-        "--experimental-worker"
+        "--preserve-symlinks"
       ]
     },
     {
