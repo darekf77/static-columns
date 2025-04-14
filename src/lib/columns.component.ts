@@ -1,4 +1,3 @@
-//#region @browser
 import {
   Component,
   OnInit,
@@ -6,6 +5,7 @@ import {
   ViewChildren,
   QueryList,
 } from '@angular/core';
+
 import { ColumnComponent } from './column';
 // import { Log, Level } from 'ng2-logger/index';
 // const log = Log.create('test');
@@ -16,10 +16,6 @@ import { ColumnComponent } from './column';
   templateUrl: './columns.component.html',
   styleUrls: ['./columns.component.scss'],
 })
-export class ColumnsComponent implements OnInit {
+export class ColumnsComponent {
   @ViewChildren(ColumnComponent) childrens: QueryList<ColumnComponent>;
-
-  constructor() {}
-  ngOnInit() {}
 }
-//#endregion
