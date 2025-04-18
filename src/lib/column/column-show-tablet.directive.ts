@@ -12,6 +12,7 @@ import { BaseHideShowDirective } from './base-hide-show.directive';
 
 @Directive({
   selector: '[showTablet]',
+  standalone: false,
 })
 export class DirectiveShowTablet extends BaseHideShowDirective {
   action(state: 'mobile' | 'tablet' | 'desktop') {

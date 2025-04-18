@@ -11,6 +11,7 @@ import { BreakpointsService } from '../breakpoints.service';
 
 @Directive({
   selector: '[baseHideShowDirective]',
+  standalone: false,
 })
 export abstract class BaseHideShowDirective {
   $destroy = new Subject();

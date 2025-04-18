@@ -15,6 +15,7 @@ import { DirectiveShrinkOnTablet } from './shrink-on-tablet.directive';
 
 @Directive({
   selector: '[shrinkOnMobile]',
+  standalone: false,
 })
 export class DirectiveShrinkOnMobile extends BaseHideShowDirective {
   scaleFactor = 75;

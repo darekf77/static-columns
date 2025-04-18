@@ -4,6 +4,7 @@ import { Component, OnInit, Input, HostBinding } from '@angular/core';
   selector: 'column',
   template: '<ng-content></ng-content>',
   styleUrls: ['./column.component.scss'],
+  standalone: false,
 })
 export class ColumnComponent implements OnInit {
   @HostBinding('style.flex.basis.px')

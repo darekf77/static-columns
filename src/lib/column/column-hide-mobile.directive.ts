@@ -7,11 +7,14 @@ import {
   Renderer2,
 } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
+
 import { BreakpointsService } from '../breakpoints.service';
+
 import { BaseHideShowDirective } from './base-hide-show.directive';
 
 @Directive({
   selector: '[hideMobile]',
+  standalone: false,
 })
 export class DirectiveHideMobile extends BaseHideShowDirective {
   action(state: 'mobile' | 'tablet' | 'desktop') {

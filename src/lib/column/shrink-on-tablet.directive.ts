@@ -16,6 +16,7 @@ import { BaseHideShowDirective } from './base-hide-show.directive';
 
 @Directive({
   selector: '[shrinkOnTablet]',
+  standalone: false,
 })
 export class DirectiveShrinkOnTablet extends BaseHideShowDirective {
   constructor(

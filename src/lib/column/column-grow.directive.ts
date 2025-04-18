@@ -2,6 +2,7 @@ import { Component, Directive, ElementRef, Renderer2 } from '@angular/core';
 
 @Directive({
   selector: '[grow]',
+  standalone: false,
 })
 export class DirectiveGrow {
   constructor(

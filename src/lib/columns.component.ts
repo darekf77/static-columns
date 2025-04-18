@@ -15,6 +15,7 @@ import { ColumnComponent } from './column';
   selector: 'columns-container',
   templateUrl: './columns.component.html',
   styleUrls: ['./columns.component.scss'],
+  standalone: false,
 })
 export class ColumnsComponent {
   @ViewChildren(ColumnComponent) childrens: QueryList<ColumnComponent>;

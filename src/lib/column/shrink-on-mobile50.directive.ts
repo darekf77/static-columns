@@ -13,6 +13,7 @@ import { DirectiveShrinkOnMobile } from './shrink-on-mobile75.directive';
 
 @Directive({
   selector: '[shrinkOnMobile50]',
+  standalone: false,
 })
 export class DirectiveShrinkOnMobile50 extends DirectiveShrinkOnMobile {
   scaleFactor: number = 50;

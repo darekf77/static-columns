@@ -13,6 +13,7 @@ import { Subscription } from 'rxjs';
   selector: 'columns-gap',
   templateUrl: './columns-gap.component.html',
   styleUrls: ['./columns-gap.component.scss'],
+  standalone: false,
 })
 export class ColumnsGapComponent implements OnInit {
   @HostBinding('style.flex.basis.px')

@@ -25,6 +25,7 @@ const frontendHost =
 //#region @browser
 @Component({
   selector: 'app-static-columns',
+  standalone: false,
   template: `hello from static-columns<br>
     Angular version: {{ angularVersion }}<br>
     <br>
