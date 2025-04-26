@@ -6,6 +6,10 @@
     {
       "artifactName": "npm-lib-and-cli-tool",
     },
+    // {
+    //   "artifactName": "angular-node-app",
+    //   "releaseType": "static-pages",
+    // },
   ],
 
   "isCoreProject": false,
