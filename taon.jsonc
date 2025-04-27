@@ -2,17 +2,11 @@
   "type": "isomorphic-lib",
   "version": "v19",
 
-  "autoReleaseConfigAllowedItems": [
-    // {
-    //   "artifactName": "npm-lib-and-cli-tool",
-    // },
-    // taon ar --release.skipTagGitPush --release.skipBuildingArtifacts="npm-lib-and-cli-tool"
-    {
-      "artifactName": "angular-node-app",
-      "releaseType": "static-pages",
-      "envName": "static-pages",
-    },
-  ],
+  "autoReleaseConfigAllowedItems": [{
+    "artifactName": "angular-node-app",
+    "envName": "static-pages",
+    "releaseType": "static-pages"
+  }],
 
   "isCoreProject": false,
 
