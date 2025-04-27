@@ -3,13 +3,15 @@
   "version": "v19",
 
   "autoReleaseConfigAllowedItems": [
-    {
-      "artifactName": "npm-lib-and-cli-tool",
-    },
     // {
-    //   "artifactName": "angular-node-app",
-    //   "releaseType": "static-pages",
+    //   "artifactName": "npm-lib-and-cli-tool",
     // },
+    // taon ar --release.skipTagGitPush --release.skipBuildingArtifacts="npm-lib-and-cli-tool"
+    {
+      "artifactName": "angular-node-app",
+      "releaseType": "static-pages",
+      "envName": "static-pages",
+    },
   ],
 
   "isCoreProject": false,
