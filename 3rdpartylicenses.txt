@@ -346,7 +346,7 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-json10/websql
+json10
 
 json5
 MIT
@@ -631,7 +631,7 @@ licenses; we recommend you read them, as their terms may differ from the
 terms above.
 
 
-lodash-walk-object/websql
+lodash-walk-object
 
 moment
 MIT
@@ -684,9 +684,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
-ng2-logger/websql
+ng2-logger
 
-ng2-rest/websql
+ng2-rest
 
 primeicons
 MIT
@@ -1072,17 +1072,17 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+taon
+
 taon-storage/websql
 
 taon-type-sql/websql
 
-taon-typeorm/websql
-
-taon/websql
+taon-typeorm
 
 tnp-core
 
-typescript-class-helpers/websql
+typescript-class-helpers
 
 uuid
 MIT
