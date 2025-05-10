@@ -2,11 +2,16 @@
   "type": "isomorphic-lib",
   "version": "v19",
 
-  "autoReleaseConfigAllowedItems": [{
-    "artifactName": "angular-node-app",
-    "envName": "static-pages",
-    "releaseType": "static-pages"
-  }],
+  "autoReleaseConfigAllowedItems": [
+    {
+      "artifactName": "npm-lib-and-cli-tool"
+    }
+    // {
+    //   "artifactName": "angular-node-app",
+    //   "envName": "static-pages",
+    //   "releaseType": "static-pages",
+    // },
+  ],
 
   "isCoreProject": false,
 
