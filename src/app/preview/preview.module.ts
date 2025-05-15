@@ -8,7 +8,7 @@ import {
   TaonGithubForkMeCornerModule,
   TaonFullMaterialModule,
   TaonGithubForkMeRibbonModule,
-} from 'taon-ui/src';
+} from 'taon/src';
 
 const routes: Routes = [
   {
