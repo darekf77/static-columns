@@ -1,6 +1,6 @@
 {
   "name": "static-columns",
-  "version": "19.0.13",
+  "version": "19.0.14",
   "license": "MIT",
   "author": "Dariusz Filipiak",
   "private": false,
@@ -341,6 +341,7 @@
     "flex-box",
     "columns"
   ],
+  "main": "dist/app.electron.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/darekf77/static-columns.git"
