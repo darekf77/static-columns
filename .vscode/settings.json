@@ -63,7 +63,9 @@
   },
   "workbench.colorCustomizations": {
     "activityBar.background": "#d11ab3",
-    "activityBar.foreground": "#313129"
+    "activityBar.foreground": "#313129",
+    "statusBar.background": "#b649a0",
+    "statusBar.debuggingBackground": "#15d8ff"
   },
   "editor.rulers": [
     80,
