@@ -1,6 +1,6 @@
 {
   "name": "static-columns",
-  "version": "19.0.20",
+  "version": "19.0.21",
   "scripts": {
     "taon init": "taon init",
     "taon start": "taon start",
@@ -366,10 +366,5 @@
     "type": "git",
     "url": "git+https://github.com/darekf77/static-columns.git"
   },
-  "bin": {},
-  "exports": {
-    ".": {
-      "style": "./scss/index.scss"
-    }
-  }
+  "bin": {}
 }
