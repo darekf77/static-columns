@@ -1,6 +1,7 @@
 {
   "type": "isomorphic-lib",
   "version": "v19",
+  "appId": "com.domain.example.static-columns",
 
   "autoReleaseConfigAllowedItems": [
     {
@@ -14,7 +15,6 @@
   ],
 
   "isCoreProject": false,
-
   "peerDependenciesNamesForNpmLib": ["angular/core", "rxjs", "@angular/cdk"],
   "resources": ["README.md", "screen.png"],
 
@@ -48,5 +48,5 @@
     },
 
     "scripts": {}
-  },
+  }
 }
