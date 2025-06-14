@@ -6,6 +6,7 @@ import { Subscription } from 'rxjs';
   selector: 'app-preview',
   templateUrl: './preview.component.html',
   styleUrls: ['./preview.component.scss'],
+  standalone: false
 })
 export class PreviewComponent implements OnInit {
   handlers: Subscription[] = [];

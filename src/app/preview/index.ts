@@ -1,4 +1,2 @@
-//#region @browser
-export * from './preview.component';
-export * from './preview.module';
-//#endregion
+export * from './preview.component'; // @browser
+export * from './preview.module'; // @browser
