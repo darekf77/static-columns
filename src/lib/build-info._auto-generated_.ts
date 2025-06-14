@@ -2,6 +2,6 @@
 export const BUILD_FRAMEWORK_CLI_NAME = 'tnp';
 export const APP_ID = 'com.domain.example.static-columns';
 export const PROJECT_NPM_NAME = 'static-columns';
-export const CURRENT_PACKAGE_VERSION = '19.0.27';
+export const CURRENT_PACKAGE_VERSION = '19.0.34';
 // THIS FILE IS GENERATED - DO NOT MODIFY
       
