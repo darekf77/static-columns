@@ -1,3 +1,4 @@
+//#region imports
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import {
   Component,
@@ -9,9 +10,12 @@ import {
   Renderer2,
 } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
+
 import { BreakpointsService } from '../breakpoints.service';
+
 import { BaseHideShowDirective } from './base-hide-show.directive';
 import { DirectiveShrinkOnTablet } from './shrink-on-tablet.directive';
+//#endregion
 
 @Directive({
   selector: '[shrinkOnMobile]',
@@ -19,6 +23,7 @@ import { DirectiveShrinkOnTablet } from './shrink-on-tablet.directive';
 })
 export class DirectiveShrinkOnMobile extends BaseHideShowDirective {
   scaleFactor = 75;
+
   constructor(
     public e: ElementRef,
     public renderer: Renderer2,

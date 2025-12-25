@@ -1,7 +1,7 @@
 @use './vars.scss' as vars;
 @use 'bootstrap/scss/bootstrap' as *;
 
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
 @import 'primeflex/primeflex.css';
 @import 'primeflex/themes/primeone-light.css';
 @import 'primeicons/primeicons.css';
@@ -36,7 +36,7 @@
   display: block !important;
 }
 
-// TODO QUICK FIX for weird chrome padding
+
 body, html {
   margin: 0px !important; // TODO QUICK FIX for weird chrome padding
   overflow: hidden; // for ngx-scrollbar to work

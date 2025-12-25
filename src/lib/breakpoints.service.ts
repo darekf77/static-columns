@@ -1,3 +1,4 @@
+//#region imports
 import {
   BreakpointObserver,
   BreakpointState,
@@ -6,6 +7,7 @@ import {
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { _ } from 'tnp-core/src';
+//#endregion
 
 const BRK = {
   mobile: '(max-width: 599.98px)',
@@ -16,6 +18,7 @@ const BRK = {
 @Injectable({ providedIn: 'root' })
 export class BreakpointsService {
   private sub = new Subject<'mobile' | 'tablet' | 'desktop'>();
+
   public listenTo() {
     setTimeout(() => {
       this.sub.next(this.current);
@@ -24,6 +27,7 @@ export class BreakpointsService {
   }
 
   private current: 'mobile' | 'tablet' | 'desktop';
+
   constructor(breakpointObserver: BreakpointObserver) {
     breakpointObserver.observe([BRK.mobile, BRK.desktop]).subscribe(state => {
       if (!_.isUndefined([BRK.mobile].find(f => state.breakpoints[f]))) {

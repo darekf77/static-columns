@@ -1,6 +1,8 @@
+//#region imports
 import { Utils } from 'tnp-core/src';
 import { CommandType, ExecCommandType, executeCommand } from 'tnp-helpers/src';
 import type { ExtensionContext } from 'vscode';
+//#endregion
 
 const group = 'static-columns CLI essentials';
 

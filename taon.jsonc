@@ -1,13 +1,14 @@
 {
   "type": "isomorphic-lib",
   "version": "v21",
+  "dependenciesNamesForNpmLib": [],
   "appId": "com.domain.example.static-columns",
 
   "autoReleaseConfigAllowedItems": [
     {
       "artifactName": "npm-lib-and-cli-tool",
-      "taskName": "npm"
-    }
+      "taskName": "npm",
+    },
     // {
     //   "artifactName": "angular-node-app",
     //   "envName": "static-pages",
@@ -16,6 +17,7 @@
   ],
 
   "isCoreProject": false,
+  "isomorphicDependenciesForNpmLib": [],
   "peerDependenciesNamesForNpmLib": ["angular/core", "rxjs", "@angular/cdk"],
   "resources": ["README.md", "screen.png"],
 
@@ -48,6 +50,6 @@
       "url": "git+https://github.com/darekf77/static-columns.git",
     },
 
-    "scripts": {}
-  }
+    "scripts": {},
+  },
 }

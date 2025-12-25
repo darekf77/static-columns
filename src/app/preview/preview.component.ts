@@ -1,15 +1,17 @@
-//#region @browser
-import { Component, OnInit } from '@angular/core';
+//#region imports
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
+//#endregion
 
 @Component({
   selector: 'app-preview',
   templateUrl: './preview.component.html',
   styleUrls: ['./preview.component.scss'],
-  standalone: false
+  standalone: false,
 })
-export class PreviewComponent implements OnInit {
+export class PreviewComponent implements OnInit, OnDestroy {
   handlers: Subscription[] = [];
+
   constructor() {}
 
   ngOnInit() {}
@@ -18,4 +20,3 @@ export class PreviewComponent implements OnInit {
     this.handlers.forEach(h => h.unsubscribe());
   }
 }
-//#endregion

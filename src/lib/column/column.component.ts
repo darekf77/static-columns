@@ -1,4 +1,6 @@
+//#region imports
 import { Component, OnInit, Input, HostBinding } from '@angular/core';
+//#endregion
 
 @Component({
   selector: 'column',

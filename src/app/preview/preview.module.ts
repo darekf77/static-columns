@@ -1,14 +1,17 @@
-//#region @browser
-import { NgModule } from '@angular/core';
+//#region imports
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PreviewComponent } from './preview.component';
-import { StaticColumnsModule } from '../../lib/columns.module';
 import {
   TaonGithubForkMeCornerModule,
   TaonFullMaterialModule,
   TaonGithubForkMeRibbonModule,
 } from 'taon-ui/src';
+
+import { StaticColumnsModule } from '../../lib/columns.module';
+
+import { PreviewComponent } from './preview.component';
+//#endregion
 
 const routes: Routes = [
   {
@@ -34,4 +37,3 @@ const routes: Routes = [
   declarations: [PreviewComponent],
 })
 export class PreviewModule {}
-//#endregion

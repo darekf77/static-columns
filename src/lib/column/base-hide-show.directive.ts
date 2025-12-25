@@ -1,3 +1,4 @@
+//#region imports
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import {
   Component,
@@ -5,16 +6,20 @@ import {
   ElementRef,
   OnInit,
   Renderer2,
+  OnDestroy,
 } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
+
 import { BreakpointsService } from '../breakpoints.service';
+//#endregion
 
 @Directive({
   selector: '[baseHideShowDirective]',
   standalone: false,
 })
-export abstract class BaseHideShowDirective {
+export abstract class BaseHideShowDirective implements OnDestroy, OnInit {
   $destroy = new Subject();
+
   constructor(
     public e: ElementRef,
     public renderer: Renderer2,

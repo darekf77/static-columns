@@ -1,4 +1,4 @@
-//#region @browser
+//#region imports
 import {
   Component,
   EventEmitter,
@@ -6,8 +6,10 @@ import {
   Input,
   OnInit,
   Output,
+  OnDestroy,
 } from '@angular/core';
 import { Subscription } from 'rxjs';
+//#endregion
 
 @Component({
   selector: 'columns-gap',
@@ -15,13 +17,15 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./columns-gap.component.scss'],
   standalone: false,
 })
-export class ColumnsGapComponent implements OnInit {
+export class ColumnsGapComponent implements OnInit, OnDestroy {
   @HostBinding('style.flex.basis.px')
   @HostBinding('style.minWidth.px')
   width: number = 20;
 
   handlers: Subscription[] = [];
+
   @Output() columnsGapDataChanged = new EventEmitter();
+
   @Input() columnsGapData: any = {};
 
   constructor() {}
@@ -32,4 +36,3 @@ export class ColumnsGapComponent implements OnInit {
     this.handlers.forEach(h => h.unsubscribe());
   }
 }
-//#endregion

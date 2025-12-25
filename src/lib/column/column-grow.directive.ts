@@ -1,4 +1,6 @@
+//#region imports
 import { Component, Directive, ElementRef, Renderer2 } from '@angular/core';
+//#endregion
 
 @Directive({
   selector: '[grow]',

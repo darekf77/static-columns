@@ -1,3 +1,4 @@
+//#region imports
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import {
   Component,
@@ -11,6 +12,7 @@ import { Subject, takeUntil } from 'rxjs';
 import { BreakpointsService } from '../breakpoints.service';
 
 import { BaseHideShowDirective } from './base-hide-show.directive';
+//#endregion
 
 @Directive({
   selector: '[hideDesktop]',

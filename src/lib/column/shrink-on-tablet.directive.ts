@@ -1,3 +1,4 @@
+//#region imports
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import {
   Component,
@@ -9,8 +10,12 @@ import {
   Renderer2,
 } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
+
 import { BreakpointsService } from '../breakpoints.service';
+
 import { BaseHideShowDirective } from './base-hide-show.directive';
+//#endregion
+
 // import { DirectiveShrinkOnMobile50 } from './shrink-on-mobile50.directive';
 // import { DirectiveShrinkOnMobile } from './shrink-on-mobile75.directive';
 
@@ -28,6 +33,7 @@ export class DirectiveShrinkOnTablet extends BaseHideShowDirective {
   ) {
     super(e, renderer, breakpoints);
   }
+
   action(state: 'mobile' | 'tablet' | 'desktop') {
     // if (state === 'tablet') {
     //   this.scale(0.75)

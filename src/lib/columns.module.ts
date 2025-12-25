@@ -1,6 +1,8 @@
-//#region @browser
-import { NgModule } from '@angular/core';
+//#region imports
 import { LayoutModule } from '@angular/cdk/layout';
+import { NgModule } from '@angular/core';
+
+import { BreakpointsService } from './breakpoints.service';
 import {
   ColumnComponent,
   DirectiveGrow,
@@ -16,7 +18,7 @@ import {
 } from './column';
 import { ColumnsGapComponent } from './columns-gap/columns-gap.component';
 import { ColumnsComponent } from './columns.component';
-import { BreakpointsService } from './breakpoints.service';
+//#endregion
 
 const components = [
   ColumnsComponent,
@@ -41,4 +43,3 @@ const components = [
   providers: [BreakpointsService],
 })
 export class StaticColumnsModule {}
-//#endregion
