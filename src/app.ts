@@ -59,9 +59,9 @@ console.log('Your frontend host ' + HOST_CONFIG['MainContext'].frontendHost);
 
   imports: [
     RouterOutlet,
-    AsyncPipe,
-    NgFor,
-    JsonPipe,
+    // AsyncPipe,
+    // NgFor,
+    // JsonPipe,
     // MaterialCssVarsModule.forRoot({
     //   // inited angular material - remove if not needed
     //   primary: '#4758b8',
