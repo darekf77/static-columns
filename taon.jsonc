@@ -9,11 +9,11 @@
       "artifactName": "npm-lib-and-cli-tool",
       "taskName": "npm",
     },
-    // {
-    //   "artifactName": "angular-node-app",
-    //   "envName": "static-pages",
-    //   "releaseType": "static-pages",
-    // },
+    {
+      "artifactName": "angular-node-app",
+      "releaseType": "static-pages",
+      "taskName": "static-pages",
+    },
   ],
 
   "isCoreProject": false,
