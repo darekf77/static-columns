@@ -5,6 +5,7 @@ const env: Partial<EnvOptions> = {
   ...baseEnv,
   build: {
     ...baseEnv.build,
+    websql: true,
   },
 };
 export default env;
