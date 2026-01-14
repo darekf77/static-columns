@@ -1,9 +1,8 @@
 //#region imports
 import * as os from 'os'; // @backend
 
-import { AsyncPipe, CommonModule, JsonPipe, NgFor } from '@angular/common'; // @browser
+import { AsyncPipe, JsonPipe, NgFor } from '@angular/common'; // @browser
 import {
-  NgModule,
   inject,
   Injectable,
   APP_INITIALIZER,
@@ -11,21 +10,38 @@ import {
   provideBrowserGlobalErrorListeners,
   isDevMode,
   mergeApplicationConfig,
+  provideZonelessChangeDetection,
+  signal,
 } from '@angular/core'; // @browser
-import { Component, OnInit } from '@angular/core'; // @browser
+import { Component } from '@angular/core'; // @browser
 import { VERSION } from '@angular/core'; // @browser
 import {
   provideClientHydration,
   withEventReplay,
 } from '@angular/platform-browser';
-import { provideRouter, RouterOutlet, Routes } from '@angular/router';
+import {
+  provideRouter,
+  Router,
+  RouterLinkActive,
+  RouterModule,
+  RouterOutlet,
+  ActivatedRoute,
+  Routes,
+  Route,
+} from '@angular/router';
 import { provideServiceWorker } from '@angular/service-worker';
 import { provideServerRendering, withRoutes } from '@angular/ssr';
 import { RenderMode, ServerRoute } from '@angular/ssr';
 import Aura from '@primeng/themes/aura'; // @browser
-import { MaterialCssVarsModule } from 'angular-material-css-vars'; // @browser
-// import { providePrimeNG } from 'primeng/config'; // @browser
+import { providePrimeNG } from 'primeng/config'; // @browser
+import { toSignal } from '@angular/core/rxjs-interop'; // @browser
 import { BehaviorSubject, Observable, map, switchMap } from 'rxjs';
+import { MatCardModule } from '@angular/material/card'; // @browser
+import { MatIconModule } from '@angular/material/icon'; // @browser
+import { MatDividerModule } from '@angular/material/divider'; // @browser
+import { MatButtonModule } from '@angular/material/button'; // @browser
+import { MatListModule } from '@angular/material/list'; // @browser
+import { MatTabsModule } from '@angular/material/tabs'; // @browser
 import {
   Taon,
   TaonBaseContext,
@@ -44,12 +60,13 @@ import {
 import { Utils, UtilsOs } from 'tnp-core/src';
 
 import { HOST_CONFIG } from './app.hosts';
+// @placeholder-for-imports
 
 //#endregion
 
-console.log('hello world');
-console.log('Your backend host ' + HOST_CONFIG['MainContext'].host);
-console.log('Your frontend host ' + HOST_CONFIG['MainContext'].frontendHost);
+const firstHostConfig = (Object.values(HOST_CONFIG) || [])[0];
+console.log('Your backend host ' + firstHostConfig?.host);
+console.log('Your frontend host ' + firstHostConfig?.frontendHost);
 
 //#region static-columns component
 
@@ -58,54 +75,53 @@ console.log('Your frontend host ' + HOST_CONFIG['MainContext'].frontendHost);
   selector: 'app-root',
 
   imports: [
-    RouterOutlet,
+    // RouterOutlet,
     // AsyncPipe,
-    // NgFor,
+    MatCardModule,
+    MatIconModule,
+    MatDividerModule,
+    MatButtonModule,
+    MatListModule,
+    MatTabsModule,
+    RouterModule,
     // JsonPipe,
-    // MaterialCssVarsModule.forRoot({
-    //   // inited angular material - remove if not needed
-    //   primary: '#4758b8',
-    //   accent: '#fedfdd',
-    // }),
   ],
-  template: `<router-outlet></router-outlet>`,
-  styles: [
-    `
-      body {
-        margin: 0px !important;
-      }
-    `,
-  ],
+  template: `
+    @if (itemsLoaded()) {
+      <router-outlet />
+    }
+  `,
 })
 export class StaticColumnsApp {
-  angularVersion =
-    VERSION.full +
-    ` mode: ${UtilsOs.isRunningInWebSQL() ? ' (websql)' : '(normal)'}`;
+  itemsLoaded = signal(false);
+  navItems =
+    StaticColumnsClientRoutes.length <= 1
+      ? []
+      : StaticColumnsClientRoutes.filter(r => r.path !== undefined).map(r => ({
+          path: r.path === '' ? '/' : `/${r.path}`,
+          label: r.path === '' ? 'Home' : `${r.path}`,
+        }));
 
-  userApiService = inject(UserApiService);
+  activatedRoute = inject(ActivatedRoute);
 
-  private refresh = new BehaviorSubject<void>(undefined);
-
-  readonly users$: Observable<User[]> = this.refresh.pipe(
-    switchMap(() =>
-      this.userApiService.userController
-        .getAll()
-        .request()
-        .observable.pipe(map(r => r.body.json)),
-    ),
-  );
-
-  readonly hello$ = this.userApiService.userController
-    .helloWorld()
-    .request()
-    .observable.pipe(map(r => r.body.text));
-
-  async addUser(): Promise<void> {
-    const newUser = new User();
-    newUser.name = `user-${Math.floor(Math.random() * 1000)}`;
-    await this.userApiService.userController.save(newUser).request();
-    this.refresh.next();
+  get activePath(): string {
+    return globalThis?.location.pathname?.split('?')[0];
   }
+
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    console.log(globalThis?.location.pathname);
+    // TODO set below from 1000 to zero in production
+    Taon.removeLoader(1000).then(() => {
+      this.itemsLoaded.set(true);
+    });
+  }
+
+  taonMode = UtilsOs.isRunningInWebSQL() ? 'websql' : 'normal nodejs';
+  angularVersion = VERSION.full;
+  userApiService = inject(UserApiService);
+  router = inject(Router);
 }
 //#endregion
 
@@ -139,16 +155,25 @@ export const StaticColumnsServerRoutes: ServerRoute[] = [
     renderMode: RenderMode.Prerender,
   },
 ];
-export const routes: Routes = [
+export const StaticColumnsClientRoutes: Routes = [
   {
     path: '',
-    redirectTo: 'preview',
     pathMatch: 'full',
+    redirectTo: () => {
+      if (StaticColumnsClientRoutes.length === 1) {
+        return '';
+      }
+      return StaticColumnsClientRoutes.find(r => r.path !== '')!.path!;
+    },
   },
+  // PUT ALL ROUTES HERE
+  // @placeholder-for-routes
+  // @app-ts-generated
   {
     path: 'preview',
+
     loadChildren: () =>
-      import('./app/preview/preview.module').then(m => m.PreviewModule),
+      import('./app/preview/preview.routes').then(m => m.PreviewRoutes),
   },
 ];
 //#endregion
@@ -158,23 +183,23 @@ export const routes: Routes = [
 //#region @browser
 export const StaticColumnsAppConfig: ApplicationConfig = {
   providers: [
+    provideZonelessChangeDetection(),
     {
       provide: TAON_CONTEXT,
-      useFactory: () => MainContext,
+      useFactory: () => StaticColumnsContext,
     },
-    // providePrimeNG({
-    //   // inited ng prime - remove if not needed
-    //   theme: {
-    //     preset: Aura,
-    //   },
-    // }),
+    providePrimeNG({
+      theme: {
+        preset: Aura,
+      },
+    }),
     {
       provide: APP_INITIALIZER,
       multi: true,
       useFactory: () => StaticColumnsStartFunction,
     },
     provideBrowserGlobalErrorListeners(),
-    provideRouter(routes),
+    provideRouter(StaticColumnsClientRoutes),
     provideClientHydration(withEventReplay()),
     provideServiceWorker('ngsw-worker.js', {
       enabled: !isDevMode(),
@@ -256,16 +281,14 @@ class UserMigration extends TaonBaseMigration {
 //#endregion
 
 //#region  static-columns context
-var MainContext = Taon.createContext(() => ({
-  ...HOST_CONFIG['MainContext'],
+var StaticColumnsContext = Taon.createContext(() => ({
+  ...HOST_CONFIG['StaticColumnsContext'],
   contexts: { TaonBaseContext },
 
   //#region @websql
   /**
-   * This is dummy migration - you DO NOT NEED need this migrations object
-   * if you are using HOST_CONFIG['MainContext'] that contains 'migrations' object.
-   * DELETE THIS 'migrations' object if you use taon CLI that generates
-   * migrations automatically inside /src/migrations folder.
+   * In production use specyfic for this context name
+   * generated migration object from  ./migrations/index.ts.
    */
   migrations: {
     UserMigration,
@@ -287,7 +310,10 @@ var MainContext = Taon.createContext(() => ({
 const StaticColumnsStartFunction = async (
   startParams?: Taon.StartParams,
 ): Promise<void> => {
-  await MainContext.initialize();
+  await StaticColumnsContext.initialize();
+  // @placeholder-for-contexts-init
+
+  // INIT ALL ACTIVE CONTEXTS HERE
 
   //#region @backend
   if (
@@ -301,21 +327,6 @@ const StaticColumnsStartFunction = async (
   //#region @backend
   console.log(`Hello in NodeJs backend! os=${os.platform()}`);
   //#endregion
-
-  if (UtilsOs.isBrowser) {
-    let users = (
-      await MainContext.getClassInstance(UserController).getAll().request()
-    ).body?.json;
-
-    if (UtilsOs.isElectron) {
-      // TODO QUICK_FIX (ng2-rest refactor for ipc needed)
-      users = users.map(u => new User().clone(u));
-    }
-
-    for (const user of users || []) {
-      console.log(`user: ${user.name} - ${user.getHello()}`);
-    }
-  }
 };
 //#endregion
 

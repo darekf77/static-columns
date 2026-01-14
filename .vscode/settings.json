@@ -51,15 +51,18 @@
     "tslint.*": true,
     "*.schema.json": true
   },
+
   "workbench.colorCustomizations": {
     "activityBar.background": "#d11ab3",
     "activityBar.foreground": "#313129",
     "statusBar.background": "#b649a0",
     "statusBar.debuggingBackground": "#15d8ff"
   },
+
   "editor.rulers": [80, 120],
   "html.format.wrapAttributes": "force-aligned",
   "workbench.colorTheme": "Default Light+",
+
   "search.exclude": {
     "bin": true,
     "local_release": true,
@@ -93,38 +96,47 @@
     "*.rest": true,
     "**/*.rest": true
   },
+
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false
   },
+
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false
   },
+
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false
   },
+
   "[json5]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false
   },
+
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false
   },
+
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false
   },
+
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false
   },
+
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false
   },
+
   "eslint.migration.2_x": "off",
   "eslint.enable": true,
   "prettier.enable": true,
@@ -138,6 +150,7 @@
   "search.useIgnoreFiles": false,
   "search.include": ["**/src/**"],
   "window.title": "npm/taon-dev/static-columns  [ ${activeEditorShort} ]",
+
   "json.schemas": [
     {
       "fileMatch": ["/docs-config.jsonc"],
@@ -148,15 +161,21 @@
       "url": "./taon-config-standalone.schema.json"
     }
   ],
+
   "files.watcherExclude": {
     "local_release/**": true
   },
+
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false
   },
+
   "[dockercompose]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false
-  }
+  },
+
+  "typescript.suggest.autoImports": false,
+  "javascript.suggest.autoImports": false
 }
