@@ -1,14 +1,10 @@
+export { DummyNamespace } from 'json10-writer/src';
+
 export * from './column';
 export * from './columns-gap';
-
-//#region @browser
-export * from './breakpoints.service';
-export * from './columns.component';
-//#endregion
-
-//#region @browser
-export * from './columns.module';
-//#endregion
+export * from './breakpoints.service'; //@browser
+export * from './columns.component'; // @browser
+export * from './columns.module'; // @browser
 
 //#region @backend
 export function backendUseInfo(): void {
