@@ -1,4 +1,5 @@
-export { DummyNamespace } from 'json10-writer/src';
+export { Models } from 'typescript-class-helpers/src';
+export { CoreModels } from 'tnp-core/src';
 
 export * from './column';
 export * from './columns-gap';
