@@ -87,24 +87,14 @@ console.log('Your frontend host ' + firstHostConfig?.frontendHost);
     RouterModule,
     JsonPipe,
   ],
-  template: ` <router-outlet />`,
+  template: `
+    @if (itemsLoaded()) {
+      <router-outlet />
+    }
+  `,
 })
 export class StaticColumnsApp implements OnInit {
   itemsLoaded = signal(false);
-
-  navItems =
-    StaticColumnsClientRoutes.length <= 1
-      ? []
-      : StaticColumnsClientRoutes.filter(r => r.path !== undefined).map(r => ({
-          path: r.path === '' ? '/' : `/${r.path}`,
-          label: r.path === '' ? 'Home' : `${r.path}`,
-        }));
-
-  activatedRoute = inject(ActivatedRoute);
-
-  get activePath(): string {
-    return globalThis?.location.pathname?.split('?')[0];
-  }
 
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
@@ -114,61 +104,6 @@ export class StaticColumnsApp implements OnInit {
     Taon.removeLoader(1000).then(() => {
       this.itemsLoaded.set(true);
     });
-  }
-
-  taonMode = UtilsOs.isRunningInWebSQL() ? 'websql' : 'normal nodejs';
-
-  angularVersion = VERSION.full;
-
-  userApiService = inject(UserApiService);
-
-  router = inject(Router);
-
-  private refresh = new BehaviorSubject<void>(undefined);
-
-  readonly users = toSignal(
-    this.refresh.pipe(
-      switchMap(() =>
-        this.userApiService.userController
-          .getAll()
-          .request()
-          .observable.pipe(map(r => r.body.json)),
-      ),
-    ),
-    { initialValue: [] },
-  );
-
-  readonly hello$ = this.userApiService.userController
-    .helloWorld()
-    .request()
-    .observable.pipe(map(r => r.body.text));
-
-  async deleteUser(userToDelete: User): Promise<void> {
-    await this.userApiService.userController
-      .deleteById(userToDelete.id)
-      .request();
-    this.refresh.next();
-  }
-
-  async addUser(): Promise<void> {
-    const newUser = new User();
-    newUser.name = `user-${Math.floor(Math.random() * 1000)}`;
-    await this.userApiService.userController.save(newUser).request();
-    this.refresh.next();
-  }
-
-  forceShowBaseRootApp = false;
-
-  navigateTo(item: { path: string; label: string }): void {
-    if (item.path === '/') {
-      if (this.forceShowBaseRootApp) {
-        return;
-      }
-      this.forceShowBaseRootApp = true;
-      return;
-    }
-    this.forceShowBaseRootApp = false;
-    this.router.navigateByUrl(item.path);
   }
 }
 //#endregion
