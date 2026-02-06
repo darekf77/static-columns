@@ -184,10 +184,10 @@ export const StaticColumnsAppConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideRouter(StaticColumnsClientRoutes, withHashLocation()),
     provideClientHydration(withEventReplay()),
-    provideServiceWorker('ngsw-worker.js', {
-      enabled: !isDevMode(),
-      registrationStrategy: 'registerWhenStable:30000',
-    }),
+    // provideServiceWorker('ngsw-worker.js', {
+    //   enabled: !isDevMode(),
+    //   registrationStrategy: 'registerWhenStable:30000',
+    // }),
   ],
 };
 
