@@ -6,9 +6,7 @@ const env: Partial<EnvOptions> = {
   build: {
     ...baseEnv.build,
     websql: true,
-    pwa: {
-      disableServiceWorker: true,
-    },
+    prod: true,
   },
 };
 export default env;
