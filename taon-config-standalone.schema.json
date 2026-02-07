@@ -6445,7 +6445,7 @@
           "type": "string",
           "description": "Short description of auto release item"
         },
-        "askBeforeDeployment": {
+        "askUserBeforeFinalAction": {
           "type": "boolean",
           "description": "Ask for confirmation before deployement to taon cloud"
         }
