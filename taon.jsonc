@@ -11,8 +11,9 @@
     },
     {
       "artifactName": "angular-node-app",
-      "releaseType": "static-pages",
+      "askBeforeDeployment": true,
       "envName": "static-pages",
+      "releaseType": "static-pages",
       "taskName": "static-pages",
     },
   ],
