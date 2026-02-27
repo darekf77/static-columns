@@ -1,4 +1,3 @@
-export { Models } from 'typescript-class-helpers/src';
 export { CoreModels } from 'tnp-core/src';
 
 export * from './column';
