@@ -2,20 +2,7 @@
 import { LayoutModule } from '@angular/cdk/layout';
 import { NgModule } from '@angular/core';
 
-import {
-  ColumnComponent,
-  DirectiveGrow,
-  DirectiveHideDesktop,
-  DirectiveHideTablet,
-  DirectiveHideMobile,
-  DirectiveShowDesktop,
-  DirectiveShowMobile,
-  DirectiveShowTablet,
-  DirectiveShrinkOnMobile50,
-  DirectiveShrinkOnMobile,
-  DirectiveShrinkOnTablet,
-} from './column';
-import { ColumnsGapComponent } from './columns-gap/columns-gap.component';
+import { ColumnComponent, DirectiveGrow } from './column';
 import { ColumnsComponent } from './columns.component';
 //#endregion
 
@@ -23,16 +10,6 @@ const components = [
   ColumnsComponent,
   ColumnComponent,
   DirectiveGrow,
-  DirectiveHideMobile,
-  DirectiveHideTablet,
-  DirectiveHideDesktop,
-  DirectiveShowTablet,
-  DirectiveShowMobile,
-  DirectiveShowDesktop,
-  ColumnsGapComponent,
-  DirectiveShrinkOnMobile50,
-  DirectiveShrinkOnMobile,
-  DirectiveShrinkOnTablet,
 ];
 
 @NgModule({
