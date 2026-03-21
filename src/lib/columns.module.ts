@@ -2,7 +2,6 @@
 import { LayoutModule } from '@angular/cdk/layout';
 import { NgModule } from '@angular/core';
 
-import { BreakpointsService } from './breakpoints.service';
 import {
   ColumnComponent,
   DirectiveGrow,
@@ -40,6 +39,5 @@ const components = [
   imports: [LayoutModule],
   exports: [LayoutModule, ...components],
   declarations: [...components],
-  providers: [BreakpointsService],
 })
 export class StaticColumnsModule {}
