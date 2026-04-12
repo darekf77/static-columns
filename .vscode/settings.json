@@ -152,7 +152,7 @@
   "prettier.prettierPath": "./node_modules/prettier",
   "search.useIgnoreFiles": false,
   "search.include": ["**/src/**"],
-  "window.title": "npm/taon-dev/static-columns  [ ${activeEditorShort} ]",
+  "window.title": "taon-dev/static-columns () [ ${activeEditorShort}]",
 
   "json.schemas": [
     {
