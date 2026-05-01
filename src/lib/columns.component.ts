@@ -10,9 +10,6 @@ import {
 import { ColumnComponent } from './column';
 //#endregion
 
-// import { Log, Level } from 'ng2-logger/index';
-// const log = Log.create('test');
-// log.i('asdas')
 
 @Component({
   selector: 'columns-container',
