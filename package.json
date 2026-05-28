@@ -471,5 +471,9 @@
     "type": "git",
     "url": "git+https://github.com/darekf77/static-columns.git"
   },
-  "bin": {}
+  "bin": {
+    "static-columns": "bin/static-columns",
+    "static-columns-debug": "bin/static-columns-debug",
+    "static-columns-debug-brk": "bin/static-columns-debug-brk"
+  }
 }
